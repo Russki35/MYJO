@@ -7,7 +7,7 @@
 
 		<h1>Publish a Post</h1>
 
-		<form method="POST" action="/OMYJ/public/posts">
+		<form method="POST" action="/MYJO/public/posts">
 
 			{{ csrf_field() }}
 
