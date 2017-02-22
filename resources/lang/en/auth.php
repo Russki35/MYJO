@@ -14,6 +14,7 @@ return [
     */
 
     'failed' => 'Vos informations ne correspondent pas.',
+
     'throttle' => 'Essais limités. Réessayez dans :seconds secondes.',
 
 ];
