@@ -2,7 +2,7 @@
 <!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="{{ config('app.locale') }}"><!--<![endif]-->
 <head>
-    <title>MyJo - Welcome</title>
+    <title>MyJoOO - Welcome</title>
     <!--meta info-->
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
