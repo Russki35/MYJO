@@ -7,7 +7,7 @@
                 <p>et profitez d'une visibilité accrue auprès des professionnels des médias.</p>
             </div>
             <div class="col-lg-2 col-md-3 col-sm-4" data-appear-animation="fadeInUp" data-appear-animation-delay="200">
-                <a href="#" data-toggle="modal" data-target="#connexion" id="get_started" class="button_type_3 r_corners d_inline_b color_blue tt_uppercase fs_large m_top_5 m_sm_top_25 tr_all">S'inscrire</a>
+                <a href="#" data-toggle="modal" data-target="#inscription" id="get_started" class="button_type_3 r_corners d_inline_b color_blue tt_uppercase fs_large m_top_5 m_sm_top_25 tr_all">S'inscrire</a>
             </div>
         </div>
     </div>
