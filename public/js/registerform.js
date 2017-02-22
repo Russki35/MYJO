@@ -1,7 +1,7 @@
 /**
  * Created by Etudiant on 21/02/2017.
  */
-$(document).ready(function(){
+
     var registerForm = $("#registerForm");
     registerForm.submit(function(e){
         e.preventDefault();
@@ -39,4 +39,3 @@ $(document).ready(function(){
             }
         });
     });
-});

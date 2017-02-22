@@ -1,5 +1,5 @@
 <!-- MODAL INSCRIPTION -->
-<div class="modal fade" id="registerModal" role="dialog">
+<div class="modal fade" id="inscription" role="dialog">
     <div class="modal-dialog">
 
         <!-- Modal content-->
@@ -8,51 +8,36 @@
                 <h4 class="modal-title">Inscription</h4>
             </div>
             <div class="modal-body">
-                <form id="registerForm" class="login_form m_bottom_20" method="post" action="{{ route('register') }}">
+                <form class="login_form m_bottom_20" method="post" action="{{ route('register') }}">
                     {{ csrf_field() }}
                     <ul>
                         <li class="m_bottom_10 relative">
                             <i class="icon-user-1 login_icon fs_medium color_grey_light_2"></i>
                             <input type="text" placeholder="Prénom" id="name" name="name" class="r_corners color_grey w_full fw_light" value="{{ old('name') }}" required autofocus>
-                            @if ($errors->has('name'))
-                                <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                            @endif
+                            <span id="form-errors-name" class="color_red"></span>
                         </li>
 
                         <li class="m_bottom_10 relative">
                             <i class="icon-user-1 login_icon fs_medium color_grey_light_2"></i>
                             <input type="text" placeholder="Nom" id="lastname" name="lastname" class="r_corners color_grey w_full fw_light" value="{{ old('lastname') }}" required autofocus>
-                            @if ($errors->has('lastname'))
-                                <span class="help-block">
-                                        <strong>{{ $errors->first('lastname') }}</strong>
-                                    </span>
-                            @endif
+                            <span id="form-errors-name" class="color_red"></span>
                         </li>
 
                         <li class="m_bottom_10 relative">
                             <i class="icon-mail-1 login_icon fs_medium color_grey_light_2"></i>
                             <input type="email" placeholder="Email" id="email" name="email" class="r_corners color_grey w_full fw_light" value="{{ old('email') }}" required>
-                            @if ($errors->has('email'))
-                                <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                            @endif
+                            <span id="form-errors-email" class="color_red"></span>
                         </li>
                         <li class="m_bottom_10 relative">
                             <i class="icon-lock login_icon fs_medium color_grey_light_2"></i>
                             <input type="password" placeholder="Mot de passe" id="password" name="password" class="r_corners color_grey w_full fw_light" required>
-                            @if ($errors->has('password'))
-                                <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                            @endif
+                            <span id="form-errors-password" class="color_red"></span>
                         </li>
 
                         <li class="m_bottom_10 relative">
                             <i class="icon-lock login_icon fs_medium color_grey_light_2"></i>
                             <input type="password" placeholder="Confirmer le mot de passe" id="password-confirm" name="password_confirmation" class="r_corners color_grey w_full fw_light">
+                            <span id="form-errors-password" class="color_red"></span>
                         </li>
                         <li class="m_bottom_23">
                             <input type="checkbox" checked id="checkbox_1" name="" class="d_none">

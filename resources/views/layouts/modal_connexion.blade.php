@@ -1,5 +1,5 @@
 <!-- MODAL INSCRIPTION -->
-<div class="modal fade" role="dialog">
+<div class="modal fade" id="connexion" role="dialog">
     <div class="modal-dialog">
 
         <!-- Modal content-->
@@ -49,3 +49,5 @@
 
     </div>
 </div>
+
+
