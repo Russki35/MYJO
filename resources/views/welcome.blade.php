@@ -39,6 +39,7 @@
             });
         });
     </script>
+
     </head>
     <body>
     <!--layout-->
@@ -71,7 +72,7 @@
 
                                             @if (Auth::check())
                                                 <li class="container3d relative f_xs_none m_xs_bottom_5">
-                                                    <a href="#">{{Auth::user()->name}}</a>
+                                                    <a href="/profile">{{Auth::user()->name}}</a>
                                                 </li>
 
                                                 <li class="container3d relative f_xs_none m_xs_bottom_5">
@@ -160,28 +161,9 @@
                 </div>
             </section>
         </header>
-        <!--PROJECTEUR-->
-    @include('layouts.projecteur')
 
-    @include('layouts.competence1')
 
-    <!--BLOC APPLI MOBILE-->
-
-    @include('layouts.appli_mobile')
-
-    <!--Photo background-->
-
-    @include('layouts.photo_background')
-
-    <!--Photo background-->
-
-    @include('layouts.banniere')
-
-    <!--Photo background-->
-
-    @include('layouts.recommendations')
-
-        <!--1 ER BLOC compétences-->
+        @yield('content')
 
 
 
