@@ -14,7 +14,12 @@ return [
     */
 
     'failed' => 'Vos informations ne correspondent pas.',
+<<<<<<< HEAD
+    'throttle' => 'Essais limités. Réessayez dans :seconds secondes.',
+
+=======
 
     'throttle' => 'Essais limités. Réessayez dans :seconds secondes.',
+>>>>>>> Yohan
 
 ];
