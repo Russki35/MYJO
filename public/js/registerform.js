@@ -1,6 +1,3 @@
-/**
- * Created by Etudiant on 21/02/2017.
- */
 $(document).ready(function(){
     var registerForm = $("#registerForm");
     registerForm.submit(function(e){
@@ -18,7 +15,8 @@ $(document).ready(function(){
             type:'POST',
             data:formData,
             success:function(data){
-                $('#registerModal').modal( 'hide' );
+                console.log(data.responseText);
+                $('#inscription').modal( 'hide' );
                 location.reload(true);
             },
             error: function (data) {

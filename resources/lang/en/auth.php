@@ -13,7 +13,18 @@ return [
     |
     */
 
-    'failed' => 'These credentials do not match our records.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+    'failed' => 'Vos informations ne correspondent pas.',
+<<<<<<< HEAD
+
+    'throttle' => 'Essais limités. Réessayez dans :seconds secondes.',
+=======
+<<<<<<< HEAD
+    'throttle' => 'Essais limités. Réessayez dans :seconds secondes.',
+
+=======
+
+    'throttle' => 'Essais limités. Réessayez dans :seconds secondes.',
+>>>>>>> Yohan
+>>>>>>> Yohan
 
 ];
