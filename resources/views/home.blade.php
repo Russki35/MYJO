@@ -1,17 +1,26 @@
 @extends('welcome')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+    <!--PROJECTEUR-->
+    @include('layouts.projecteur')
 
-                <div class="panel-body">
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+    @include('layouts.competence1')
+
+    <!--BLOC APPLI MOBILE-->
+
+    @include('layouts.appli_mobile')
+
+    <!--Photo background-->
+
+    @include('layouts.photo_background')
+
+    <!--Photo background-->
+
+    @include('layouts.banniere')
+
+    <!--Photo background-->
+
+    @include('layouts.recommendations')
+
+        <!--1 ER BLOC compétences-->
 @endsection
