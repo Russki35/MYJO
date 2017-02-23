@@ -8,7 +8,7 @@
                 <h4 class="modal-title">Connexion</h4>
             </div>
             <div class="modal-body">
-                <form action="{{ route('login') }}" method="post" class="login_form m_bottom_20" id="loginForm">
+                <form action="{{ route('login') }}" method="post" class="login_form m_bottom_20" id="loginForm" novalidate>
                     {{ csrf_field() }}
                     <ul>
                         <li class="m_bottom_10 relative">

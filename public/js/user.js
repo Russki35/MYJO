@@ -13,6 +13,7 @@ loginForm.submit(function(e) {
     $("#email-div").removeClass("has-error");
     $("#password-div").removeClass("has-error");
     $("#login-errors").removeClass("has-error");
+
     $.ajax({
         url: loginForm.attr('action'),
         type: 'POST',
