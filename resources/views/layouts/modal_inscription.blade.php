@@ -44,11 +44,13 @@
                             <label for="checkbox_1" class="d_inline_m fs_medium fw_light">En cochant cette case, vous acceptez les conditions générales</label>
                         </li>
                         <li class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-4">
-                                <input type="submit" name="inscription" class="button_type_5 tr_all color_blue transparent fs_medium r_corners" value="S'inscrire">
+                            <a href="/create">
+                            
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-4">
+                                    <input type="submit" name="inscription" class="button_type_5 tr_all color_blue transparent fs_medium r_corners" value="S'inscrire">
                                 <!-- <button class="button_type_5 tr_all color_blue transparent fs_medium r_corners">S'inscrire</button> -->
-                            </div>
-
+                                </div>
+                            </a>
                         </li>
                     </ul>
                 </form>
