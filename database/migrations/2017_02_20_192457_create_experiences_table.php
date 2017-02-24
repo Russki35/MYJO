@@ -29,8 +29,8 @@ class CreateExperiencesTable extends Migration
 
             $table->text('description');
 
-            $table->integer('j_id')->unsigned();
-            $table->foreign('j_id')
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')//j_id a été modifié manuellement et remplacé par user_id
                 ->references('id')
                 ->on('journalists')
                 ->onDelete('no action')

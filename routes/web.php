@@ -25,5 +25,7 @@ Route::get('/profile/{journalist}', 'JournalistsController@showUser');
 
 Route::get('/createprofile/', 'JournalistsController@create');
 
-Route::post('/edit/', 'JournalistsController@edit');// post qui vient du bouton 'modifier' sur 'mon profil'
+Route::post('/createprofile/', 'JournalistsController@store');
+
+// post qui vient du bouton 'modifier' sur 'mon profil'
 

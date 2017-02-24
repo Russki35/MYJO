@@ -24,10 +24,10 @@ class CreateFormationsTable extends Migration
 
             $table->date('obtention_date');
 
-            $table->integer('j_id')->unsigned();
-            $table->foreign('j_id')
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')
                 ->references('id')
-                ->on('journalists')
+                ->on('users')
                 ->onDelete('no action')
                 ->onUpdate('no action');
 

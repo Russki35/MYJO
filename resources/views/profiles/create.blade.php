@@ -1,7 +1,8 @@
 @extends('welcome')
 
 @section('content')
-    
+    <form method="post" action="">
+    {{ csrf_field() }}
     <!-- 1ER BLOC presentation -->
              <div class="bg_light_3 section_offset_3">
 	             <div class="container ">
@@ -15,43 +16,56 @@
 							</div>	
 	             		 </div>
 
-	             		 <div class=" row fw_light col-lg-4 col-md-4 col-sm-4">
+	             		 <div class=" row fw_light col-lg-8 col-md-4 col-sm-4">
+	             		 <button class="button_type_3 color_purple r_corners tt_uppercase fs_medium m_top_20 tr_all f_left m_right_10 m_md_bottom_10 ">Contacter le journaliste</button>
 		             		  <div class="col-xs-12 description">
 		             		  	         <p >
-		             		  				<h3 class="profil "> {{$journalist->firstname}} {{$journalist->lastname}}</h3>
-		             		  				<h5 class="profil m_bottom_20">Rédacteur en chef</h5>
-		             		  			</p>
+		             		  				<label class="profil "> {{$journalist->firstname}} {{$journalist->lastname}}</label>
+		             		  				<h5 class="profil m_bottom_20">Titre</h5>
+		             		  				<input type="text" placeholder="Intitulé du poste" id="profile_title" name="profile_title" class="r_corners color_grey w_full fw_light" value="{{ old('profile_title') }}" required>
+		             		  			</p><br>
 
-		             		  			<p ><i class="icon_size_4 icon-location-1"></i>  Localisation</p>
-		             		  			<input type="" name="">
-		             		  				<p ><i class=" profil_i color_red icon-star-1"></i><i class="profil_i color_red icon-star-1"></i><i class="profil_i color_red icon-star-1"></i><i class="profil_i color_red icon-star-1"></i><i class="profil_i color_red icon-star-half-alt"></i>
-		             		  			</p>
+		             		  			<p ><i class="icon_size_4 icon-location-1"></i>    Localisation</p><br>
+		             		  				<input type="text" placeholder="Ville" id="location" name="location" class="r_corners color_grey w_full fw_light" value="{{ old('location') }}" required>
+		             		  				<br>
 		             		  	</div>
+
 		             		  	<div class="col-xs-12">		
 		             		  			<ul class="list-inline">
-			             		   			<li>Tarif</li>
-			             		   			<input type="" name="">
-			             		   			<li>Expérience</li>
-			             		   			<input type="" name="">
-			             		   			<li>Disponibilité</li>
-			             		   			<input type="" name="">
+			             		   			<li>Tarif
+			             		   			<!-- barre réglage -->
+
+			             		   			</li>
+			             		   			<!-- <p ><i class=" profil_i color_red icon-star-1"></i><i class="profil_i color_red icon-star-1"></i><i class="profil_i color_red icon-star-1"></i><i class="profil_i color_red icon-star-1"></i><i class="profil_i color_red icon-star-half-alt"></i>
+		             		  			</p> --><br>
+			             		   			
+			             		   			<li>Expérience<input type="text" placeholder="Expérience" id="experience" name="experience" class="r_corners color_grey w_full fw_light" value="{{ old('role') }}" required></li>
+
+			             		   			
+			             		   			
+			             		   			<li><p>Disponibilité</p><br>
+			             		   				<label>Je suis disponible</label><br>
+			             		   				<input name="available" type="checkbox">
+			             		   			
+			             		   			</li>
+
+			             		   			
+			             		   			
 	             		   				</ul>	
 
+	             		   				
+
 	             		   				<ul class="list-inline">
-			             		   			<li>400 €</li>
-			             		   			<input type="" name="">
-			             		   			<li>5 ans</li>
-			             		   			<input type="" name="">
-			             		   			<li>immédiate</li>
-			             		   			<input type="" name="">
+			             		   			<li>400 €<input type="text" placeholder="Intitulé du poste" id="profile_title" name="profile_title" class="r_corners color_grey w_full fw_light" value="{{ old('profile_title') }}" required></li>
+			             		   			
+			             		   			
+			             		   			
+			             		   			
+			             		   			
 	             		   				</ul>		
 	             		   		</div>
 
 		             		  </div>
-		             		  <div class="row col-lg-4 col-md-4 col-sm-4 f_right m_bottom_10">
-	             		   		<button class="button_type_3 color_purple r_corners tt_uppercase fs_medium m_top_20 tr_all f_left m_right_10 m_md_bottom_10 ">Contacter le journaliste</button>
-	             		   		<input type="" name="">
-	             		   </div>
 		             		 </div>
 	             		   
 
@@ -116,11 +130,10 @@
 						    <div class="description col-lg-8 col-md-8 col-sm-8  m_bottom_30" >
 	                       
 		                       <p ><h5 class="m_bottom_20 ">Quelques mots pour me décrire</h5></p>
-		                       <textarea id="desription" name="description" class="fw_light" required>{{$journalist->description}}</textarea>
+		                       <textarea id="desription" name="description" class="r_corners color_grey w_full fw_light" required></textarea>
+		                       <!-- {{$journalist->description}} -->
 		                       
-		                       <a href="profile/{{ $journalist->id }}">
-		                       <button type="submit" class="btn btn-primary">Envoyer</button>
-		                       </a>
+		                       
 
 		                       
 		                       </p>
@@ -130,18 +143,22 @@
 	                     	<!-- Expériences -->
 	                     	<div class="f_right description col-lg-8 col-md-8 col-sm-8  m_bottom_30" >
 	                       
-		                       <p ><h5 class="m_bottom_20 ">Expériences</h5></p>
-		                       
-		                       <div class="col-xs-6">
-		                       		<p class="fw_ex_bold color_purple m_bottom_10 ">Tipiak</p>
-		                       </div>
+		                       <h5 class="m_bottom_20 ">Expérience</h5>
 
-		                       <div class="  col-xs-6">
-		                       		<p class="t_align_r m_bottom_10 ">Novembre 2007 - Janvier 2012</p>
-		                       </div>
-				                    <div class="col-xs-12">
-				                       <p class="fw_light">Pirate professionnel </p>
-	                       			</div>
+		                       		<p class="fw_ex_bold color_purple m_bottom_10 ">
+		                       			<input type="text" placeholder="Entreprise" id="organisation" name="organisation" class="fw_ex_bold color_purple m_bottom_10 " value="{{ old('organisation') }}" required>
+		                       		</p>
+
+		                       		<textarea type="text" placeholder="Expérience" id="experience" name="experience" class="r_corners color_grey w_full fw_light" value="{{ old('experience') }}" required></textarea>
+
+		                       <h5 class="m_bottom_20 ">Période</h5>
+		                       <p>
+		                       <input type="date" placeholder="Début" id="start_date" name="start_date" class="t_align_r m_bottom_10 " value="{{ old('start_date') }}" required></p>
+
+		                       <input type="date" placeholder="Fin" id="end_date" name="end_date" class="t_align_r m_bottom_10 " value="{{ old('end_date') }}" required></p>
+		                       
+		                       
+				                    
 	                     	</div>  
 							
 							<!-- Portfolio -->
@@ -156,7 +173,9 @@
 							<!-- Formations -->
 	                     	<div class="f_right description col-lg-8 col-md-8 col-sm-8  m_bottom_30" >
 	                       
-		                       <p ><h5 class="m_bottom_20 ">Formations</h5></p>
+		                       <p ><h5 class="m_bottom_20 ">Formations</h5><textarea type="text" placeholder="Formation" id="formation" name="formation" class="r_corners color_grey w_full fw_light" value="{{ old('formation') }}" required></textarea></p>
+
+		                       <!-- <p ><h5 class="m_bottom_20 ">Formations</h5><textarea type="text" placeholder="Expérience" id="experience" name="experience" class="r_corners color_grey w_full fw_light" value="{{ old('experience') }}" required></textarea></p -->
 		                       
 		                       <div class="col-xs-6">
 		                       		<p class="fw_ex_bold color_purple m_bottom_10 ">WebForce3</p>
@@ -183,12 +202,18 @@
 	                       
 		                       <p ><h5 class="m_bottom_20 ">Langues</h5></p>
 		                       
+		                       <a href="profile/{{ $journalist->id }}">
+		                       <button type="submit" class="btn btn-primary">Envoyer</button>
+		                       </a>
 		                       
 	                       	</div>
+
+
 	                     	 
       					</div> <!-- Fin de row -->
 
 				</div>
 			</div>
-
+	</form>
+@include('layouts.errors');
 @endsection
