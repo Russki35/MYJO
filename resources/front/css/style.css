@@ -4854,11 +4854,30 @@ only screen and (min-resolution: 144 dpi){
     margin-bottom: 5px;
 }
 
+.esp_list {
+	width:100%;
+}
 
+.description {
+    
+    padding: 10px;
+    background-color: #fff;
+    
+}
 
+.gauche-texte {
+    
+   
+}
 
+.gauche-img {
+    float:left;
+   
+}
 
-
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+	background-color: purple !important;
+}
 
 
 
