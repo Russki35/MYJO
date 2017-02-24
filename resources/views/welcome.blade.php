@@ -99,11 +99,14 @@
 
                                                         </a>
                                                             <ul class="sub_menu r_xs_corners bg_light vr_list tr_all tr_xs_none trf_xs_none bs_xs_none d_xs_none">
-                                                                <li>
-                                                                    <a href="/profile" class="d_block color_dark relative">Voir mon profil</a>
+                                                                <li><!-- "/profile" -->
+                                                                    <a href="/MYJO/public/profile" class="d_block color_dark relative">Voir mon profil</a>
                                                                 </li>
                                                                 <li>
-                                                                    <a href=/edit" class="d_block color_dark relative">éditer mon profil</a>
+                                                                    <a href="/MYJO/public/edit" class="d_block color_dark relative">Editer mon profil</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="/MYJO/public/createprofile" class="d_block color_dark relative">Créer mon profil</a>
                                                                 </li>
                                                         
 
