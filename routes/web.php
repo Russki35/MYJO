@@ -19,6 +19,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/profile', 'JournalistsController@show');
+Route::get('/profile/', 'JournalistsController@show');
 
 Route::get('/profile/{journalist}', 'JournalistsController@showUser');
+
+Route::get('/createprofile/', 'JournalistsController@create');
+
+Route::post('/edit/', 'JournalistsController@edit');// post qui vient du bouton 'modifier' sur 'mon profil'
+

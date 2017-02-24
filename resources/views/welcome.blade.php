@@ -72,7 +72,7 @@
 
                                             @if (Auth::check())
                                                 <li class="container3d relative f_xs_none m_xs_bottom_5">
-                                                    <a href="/profile">{{Auth::user()->name}}</a>
+                                                    <a href="{{ url('/profile') }}">{{Auth::user()->name}}</a>
                                                 </li>
 
                                                 <li class="container3d relative f_xs_none m_xs_bottom_5">
@@ -91,6 +91,28 @@
                                                         </li>
 
                                                     </ul>
+                                                </li>
+
+                                                <li class="container3d relative f_xs_none m_xs_bottom_5">
+
+                                                        <a style="cursor:pointer" class="color_dark fs_large relative r_xs_corners">Profil
+
+                                                        </a>
+                                                            <ul class="sub_menu r_xs_corners bg_light vr_list tr_all tr_xs_none trf_xs_none bs_xs_none d_xs_none">
+                                                                <li><!-- "/profile" -->
+                                                                    <a href="/MYJO/public/profile" class="d_block color_dark relative">Voir mon profil</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="/MYJO/public/edit" class="d_block color_dark relative">Editer mon profil</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="/MYJO/public/createprofile" class="d_block color_dark relative">Créer mon profil</a>
+                                                                </li>
+                                                        
+
+                                                            </ul>
+                                                        
+
                                                 </li>
 
                                                 <li>
@@ -122,8 +144,11 @@
                                                         <!--sub menu-->
 
                                                 </li>
+
+                                                
+
                                                 <li class="container3d relative f_xs_none m_xs_bottom_5">
-                                                    <a class="color_dark fs_large relative r_xs_corners" href="pages_about.html">Compétences
+                                                    <a class="color_dark fs_large relative r_xs_corners" href="pages_about.html">Média
                                                         <i class="icon-angle-down d_inline_m"></i>
                                                     </a>
                                                     <ul class="sub_menu r_xs_corners bg_light vr_list tr_all tr_xs_none trf_xs_none bs_xs_none d_xs_none">
