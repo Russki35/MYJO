@@ -102,11 +102,11 @@
                                                                 <li><!-- "/profile" -->
                                                                     <a href="/MYJO/public/profile" class="d_block color_dark relative">Voir mon profil</a>
                                                                 </li>
-                                                                <li>
+                                                                <!-- <li>
                                                                     <a href="/MYJO/public/edit" class="d_block color_dark relative">Editer mon profil</a>
-                                                                </li>
+                                                                </li> -->
                                                                 <li>
-                                                                    <a href="/MYJO/public/createprofile" class="d_block color_dark relative">Créer mon profil</a>
+                                                                    <a href="/MYJO/public/createprofile" class="d_block color_dark relative">Editer mon profil</a>
                                                                 </li>
                                                         
 
