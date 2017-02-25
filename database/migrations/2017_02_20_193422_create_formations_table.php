@@ -18,7 +18,7 @@ class CreateFormationsTable extends Migration
 
             $table->string('certificate');
 
-            $table->string('organisation');
+            $table->text('organisation');
 
             $table->enum('acquired', ['niveau', 'certifié']);
 

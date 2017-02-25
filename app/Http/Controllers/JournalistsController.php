@@ -8,10 +8,12 @@ use App\User_journalist;
 use App\Formations;
 use App\Experiences;
 use App\Journalist;
+use App\User;
+use Carbon\Carbon;
 
 class JournalistsController extends Controller
 {	
-	public function show()
+	public function show_old()
 	{	
 		$id = Auth::id(); // Arnaque pou récupérer l'id du mec connecté
 
@@ -27,34 +29,44 @@ class JournalistsController extends Controller
 		return view('profiles.profile', compact('journalist'));
 	}
 
-	public function showUser(Journalist $journalist)//Wildcard
+	public function show()
 	{
-		
+		$user_id = Auth::user()->id;
 		//dd($journalist);
 		//Ici on appelle toutes les données de la table journalist, on choisi au détail les infos souhaitées directement en les appelant dans la vue
 		
+		$formation = Formations::where('user_id', $user_id)->first();
+		$experience = Experiences::where('user_id', $user_id)->first();
+		$journalist = Journalist::where('user_id', $user_id)->first();
+		/*$user = Users::where('user_id', $user_id)->first();//ajouté 20h36*/
 
-		return view('profiles.profile', compact('journalist'));
+		return view('profiles.profile', compact('journalist','experience','formation','user'));
+		
 	}
 
-	public function edit(Journalist $journalist)
+	public function edit(User $user)
 	{
 		$journalist = Journalist::find($journalist);
 		return view('profiles.edit', compact('journalist'));
 
 	}
 
-	public function create(Journalist $journalist)
+	public function create(User $user)
 	{
+		$formation = Formations::where('user_id', $user->id)->first();
+		$experience = Experiences::where('user_id', $user->id)->first();
+		$journalist = Journalist::where('user_id', $user->id)->first();
+		/*$user = Users::where('user_id', $user_id)->first();//ajouté 20h36*/
 
-
-		return view('profiles.create', compact('journalist'));
+		return view('profiles.create', compact('journalist','experience','formation','user'));
 
 	}
 
 	public function store()
 	{
-
+		// Définition de la variable user_id
+		// Retrouve l'id de l'utilisateur connecté
+		$user_id = Auth::user()->id;
 
 		//dd(request()->available);
 
@@ -76,94 +88,157 @@ class JournalistsController extends Controller
 		//-------------------------------------
 
 		// Cherche à savoir si la formation est déjà existante
-		$formation = Formations::where('user_id', Auth::user()->id);
+		$formation = Formations::where('user_id', $user_id)->first();
 
 		// Si la formation n'existe pas, on la créé
-		if( ! $formation->count() )
+		 //dd(request()->all()); 
+		if( ! $formation instanceof Formations )
 		{
-			Formations::create([
-				'certificate' => request()->formation,//avant experience ici
-				'organisation' => request()->formation,//avant experience ici
+
+
+			$formation = Formations::create([
+				'certificate' => '', //-> à définir dans l'HTML
+				'organisation' => request()->organisation,
 				'acquired' => 'niveau',
-				'obtention_date' => '2017-01-15',
-				'user_id' => Auth::user()->id,
+				'obtention_date' => '2000-01-01', //-> à définir dans l'HTML
+				'user_id' => $user_id,
 			]);
 
 		} 
 		// Sinon, on modifie la formation
 		else 
 		{
+			//dd($formation);
 			$datas = [
-				'organisation' => request()->formation,
+				'certificate' => '', //-> à définir dans l'HTML
+				'organisation' => request()->organisation,
+				'acquired' => 'niveau',
+				'obtention_date' => '2000-01-01', //-> à définir dans l'HTML
+				'user_id' => $user_id,
 			];
 
-			$formation->update($datas);
+			/*$datas = [
+				'organisation' => request()->organisation,
+			];*/
+
+			
+
+			$formation->fill( $datas )->save();
 		}
 		//-------------------------------------
 		//             EXPERIENCE
 		//-------------------------------------
-
-		$experience = Experiences::where('user_id', Auth::user()->id);
+		
+		$experience = Experiences::where('user_id', $user_id)->first();
 
 		// Si la formation n'existe pas, on la créé
-		if( ! $experience->count() )
+		if( ! $experience instanceof Experiences )
 		{
-			Experiences::create([
-				'title' => request()->experience,
-				'description' => request()->experience,
-				'role' => request()->experience,
-				'start_date' => 'datetime',
-				'end_date' => 'datetime',
-				'user_id' => Auth::user()->id,
+			// dd($user_id);
+			$experience = Experiences::create([
+				'user_id' => $user_id,
+				'title' => request()->title,
+				'resume' => request()->resume,
+				'start_date' => request()->start_date,
+				'end_date' => request()->end_date,
 
-
+				
 			]);
 
 		} 
 		// Sinon, on modifie la formation
 		else 
 		{
+			//dd('toto');
 			$datas = [
-				'organisation' => request()->experience,
+				'user_id' => $user_id,
+				'title' => request()->title,
+				'resume' => request()->resume,
+				'start_date' => request()->start_date,
+				'end_date' => request()->end_date,
 			];
 
-			$experience->update($datas);
+			/*$datas = [
+				'resume' => request()->resume,
+			];*/
+
+
+			
+
+			$experience->fill( $datas )->save();
 		}
-
-		/*$journalist = Auth::user();
-
-		return view('profiles.create', compact('journalist'));*/
 
 		//-------------------------------------
 		//             JOURNALIST
 		//-------------------------------------
 
-		$journalist = Journalist::where('user_id', Auth::user()->id);
+		$journalist = Journalist::where('user_id', $user_id)->first();
 
-		// Si la formation n'existe pas, on la créé
-		if( ! $journalist->count() )
+		
+		if( ! $journalist instanceof Journalist )
 		{
-			Journalist::create([
-				'location' => request()->journalist,
-				'price' => 'decimal',
-				'picture' => request()->journalist,
-				'user_id' => Auth::user()->id,
+			$journalist = Journalist::create([
+
+				'firstname' => request()->firstname,//ajouté 21h18
+				'lastname' => request()->lastname,//ajouté 21h18
+				'profile_title' => request()->profile_title,
+				'location' => request()->location,
+				'price' => request()->price,
+				'description' => request()->description,
+				'picture' => request()->picture,//mime|jpeg
+				'user_id' => $user_id,
 			]);
 
 		} 
-		// Sinon, on modifie la formation
+		
 		else 
 		{
 			$datas = [
-				'journalist' => request()->journalist,
+				'profile_title' => request()->profile_title,
+				'location' => request()->location,
+				'price' => request()->price,
+				'description' => request()->description,
+				'picture' => request()->picture,//mime|jpeg
+				'user_id' => $user_id,
 			];
 
-			$journalist->update($datas);
+			$journalist->fill( $datas )->save();
 		}
 
-		$journalist = Auth::user();
+		$journalist = Journalist::where('user_id', $user_id)->first();
 
-		return view('profiles.create', compact('journalist'));
+		//-------------------------------------
+		//               USERS
+		//-------------------------------------
+
+		
+		/*if( ! $user instanceof Users )
+		{
+			$user = Users::create([
+
+				'firstname' => request()->profile_title,
+				'lastname' => request()->location,
+				'email' => request()->location,
+				
+			]);
+
+		} 
+		
+		else 
+		{
+			$datas = [
+				'profile_title' => request()->profile_title,
+				'location' => request()->location,
+				'price' => request()->price,
+				'description' => request()->description,
+				'picture' => request()->picture,//mime|jpeg
+				'user_id' => $user_id,
+			];
+
+			$journalist->fill( $datas )->save();
+		}*/
+
+		return redirect()->route('create_profile');
 
 	}
 	

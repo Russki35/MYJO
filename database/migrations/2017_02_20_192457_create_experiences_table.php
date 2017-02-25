@@ -27,7 +27,7 @@ class CreateExperiencesTable extends Migration
 
             $table->string('place');
 
-            $table->text('description');
+            $table->text('resume');
 
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')//j_id a été modifié manuellement et remplacé par user_id

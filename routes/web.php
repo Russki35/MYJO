@@ -21,9 +21,9 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/profile/', 'JournalistsController@show');
 
-Route::get('/profile/{journalist}', 'JournalistsController@showUser');
+Route::get('/profile/{journalist}', 'JournalistsController@show');
 
-Route::get('/createprofile/', 'JournalistsController@create');
+Route::get('/createprofile/', 'JournalistsController@create')->name('create_profile');
 
 Route::post('/createprofile/', 'JournalistsController@store');
 
