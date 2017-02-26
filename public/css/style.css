@@ -3376,6 +3376,9 @@ input:not([type="submit"]){
 	padding:5px 15px;
 	font-style:italic;
 }
+input[type="checkbox"]{
+	-webkit-appearance:checkbox;
+}
 textarea{
 	resize:none;
 	outline:none;
