@@ -155,7 +155,12 @@
 
                                                 </li>
 
-                                                
+                                                <li id="monlien">
+
+                                                        <a  href="/display" class="select_button_right color_dark f_xs_none bg_light color_light_hover fs_medium relative tt_uppercase f_left">Parcourir les profils</a>
+
+                                                </li>
+                                                <!-- style="cursor:pointer" -->
 
                                                 <li class="container3d relative f_xs_none m_xs_bottom_5">
                                                     <a class="color_dark fs_large relative r_xs_corners" href="pages_about.html">Média
@@ -319,6 +324,14 @@
     <script src="{{asset('js/theme.js')}}"></script>
     <script src="{{asset('js/user.js')}}"></script>
     <script src="{{asset('js/registerform.js')}}"></script>
+    <script>
+        $(document).ready(function (){
+
+            $('#monlien').click(function() {
+                window.location.replace("display");
+            })
+        })
+    </script>
 
 
 
