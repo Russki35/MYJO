@@ -238,7 +238,8 @@ class JournalistsController extends Controller
 			$journalist->fill( $datas )->save();
 		}*/
 
-		return redirect()->route('create_profile');
+		//return redirect()->route('create_profile');
+		return redirect()->route('profile_profile');
 
 	}
 	

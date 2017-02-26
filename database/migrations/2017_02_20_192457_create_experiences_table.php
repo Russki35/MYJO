@@ -19,8 +19,6 @@ class CreateExperiencesTable extends Migration
 
             $table->string('title');
 
-            $table->string('role');
-
             $table->date('start_date');
 
             $table->date('end_date');
