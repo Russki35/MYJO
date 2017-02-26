@@ -28,7 +28,10 @@ Route::get('/createprofile/', 'JournalistsController@create')->name('create_prof
 Route::post('/createprofile/', 'JournalistsController@store');
 
 //Ajouté 18h07
-/*Route::get('/profile/', 'JournalistsController@display')->name('display_profile');*/
+/*Route::get('/displayprofile/', 'JournalistsController@showDisplay')->name('display_profile');*/
+
+
+Route::get('/display', 'JournalistsController@showDisplay');
 
 // post qui vient du bouton 'modifier' sur 'mon profil'
 

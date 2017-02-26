@@ -14,7 +14,7 @@
 				       		<div class="col-lg-2 col-md-2 col-sm-2 m_xs_bottom_30">
 				         		<div class="text-center fs_medium checkbox" >
 				          			<div class="bg_light_2 r_corners privacy m_bottom_20">
-										<form action="" method="" class="login_form m_bottom_20">
+										<form action="" method="get" class="login_form m_bottom_20">
 										
 										
 										
@@ -74,8 +74,8 @@
                    					</aside>
 
                    					<div class="m_top_10 profil col-lg-2 col-sm-3 col-xs-6 ">
-                   					    <p>
-		             		  				<h5 class="m_bottom_5 "> Olivier Le Hénaff</h5>
+                   					    <p>	
+		             		  				<h5 class="m_bottom_5 ">Olivier Le Hénaff</h5>
 		             		  				<h6 class="m_bottom_5 fw_light">Rédacteur en chef</h6>
 		             		  				<h6 class="m_bottom_5 fs_medium  m_bottom_20">Paris</h6>
 		             		  			</p>

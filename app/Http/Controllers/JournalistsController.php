@@ -68,20 +68,6 @@ class JournalistsController extends Controller
 		// Retrouve l'id de l'utilisateur connecté
 		$user_id = Auth::user()->id;
 
-		//dd(request()->available);
-
-		/*$this->validate(request(), [
-
-			'title' => 'required', //required|min:3 -> minimum 3 caractères
-			'profile_title' => 'required',
-			'location' => 'required',
-			'seniority' => 'required',
-			'price' => 'required',
-			'experience' => 'required',
-			'description' => 'required'
-			
-
-		]);*/
 
 		//-------------------------------------
 		//             FORMATION
@@ -242,5 +228,21 @@ class JournalistsController extends Controller
 		return redirect()->route('profile_profile');
 
 	}
-	
+
+	//Ajouté 18h28
+
+
+	public function showDisplay()
+	{
+		
+		/*$profile = profile::all();*/
+
+		
+		/*$journalist = Journalist::all();*/
+		
+
+		return view('profiles.display');
+
+	}
+	//compact('journalist','experience','formation','user'));
 }
