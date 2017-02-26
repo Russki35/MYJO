@@ -11,86 +11,56 @@
 	             		 <div class="col-lg-4 col-md-4 col-sm-4 m_xs_bottom_30">
 	             		 	<div class="row">
 
-		             		 	<div class=" col-xs-12 profile_photo img-responsive ">
-											<img src="images/journalist.jpg" alt="">
+		             		 	<div class="m_right_10 ">
+											<img class="img-rounded img-responsive" src="images/journalist.jpg" alt="">
 								</div>
 							</div>	
 	             		 </div>
 
-	             		 <div class=" row fw_light col-lg-8 col-md-4 col-sm-4">
-	             		 <button class="button_type_3 color_purple r_corners tt_uppercase fs_medium m_top_20 tr_all f_left m_right_10 m_md_bottom_10 ">Contacter le journaliste</button>
-		             		    <div class="col-xs-12 description">
-
-
-		             		  	         <div>
-		             		  				<label class="profil">{{ $journalist->lastname }}</label>
-		             		  					
-		             		  			</div>
-
-		             		  				<hr>
-
-		             		  			<div>
-											<label class="profil">{{ $journalist->firstname }}</label>
-		             		  					<!-- <input type="text" placeholder="Prénom" id="firstname" name="firstname" class="r_corners color_grey w_full fw_light" value="@if( is_object( $journalist ) && isset( $journalist->firstname ) && ! old('firstname') ){{ $journalist->firstname }}@else{{ old('lastname') }}@endif"> -->
-		             		  			</div>
-
-		             		  				<hr>
-
-		             		  			<div>
+	             		  <div class=" row fw_light col-lg-4 col-md-4 col-sm-4">
+		             		  <div class=" col-xs-12 description   ">
+		             		  	         <p >
+		             		  				<h3 class="profil ">{{ $journalist->firstname }}  {{ $journalist->lastname }}</h3>
 		             		  				<h5 class="profil m_bottom_20">{{ $journalist->profile_title }}</h5>
-		             		  					<!-- <input type="text" placeholder="Intitulé du poste" id="profile_title" name="profile_title" class="r_corners color_grey w_full fw_light" value="@if( is_object( $journalist ) && isset( $journalist->profile_title ) && ! old('profile_title') ){{ $journalist->profile_title }}@else{{ old('profile_title') }}@endif" required> -->
-		             		  			</div>
-		             		  				
-		             		  			</p><br><!-- {{$journalist->firstname}} {{$journalist->lastname}} -->
+		             		  			</p>
 
-		             		  			<p ><i class="icon_size_4 icon-location-1"></i>{{ $journalist->location }}</p><br>
-		             		  				<!-- <input type="text" placeholder="Ville" id="location" name="location" class="r_corners color_grey w_full fw_light" value="@if( is_object( $journalist ) && isset( $journalist->location ) && ! old('location') ){{ $journalist->location }}@else{{ old('location') }}@endif" required> -->
-		             		  				<br>
+		             		  			<p ><i class="icon_size_4 icon-location-1"></i>  {{ $journalist->location }}</p>
+		             		  				<p ><i class=" profil_i color_red icon-star-1"></i><i class="profil_i color_red icon-star-1"></i><i class="profil_i color_red icon-star-1"></i><i class="profil_i color_red icon-star-1"></i><i class="profil_i color_red icon-star-half-alt"></i>
+		             		  			</p>
 		             		  	</div>
-
-		             		  	<div class="col-xs-12">		
-		             		  			<ul class="list-inline">
-			             		   			<li>Tarif
-			             		   			<!-- barre réglage -->
-
-			             		   			</li>
-			             		   			<!-- <p ><i class=" profil_i color_red icon-star-1"></i><i class="profil_i color_red icon-star-1"></i><i class="profil_i color_red icon-star-1"></i><i class="profil_i color_red icon-star-1"></i><i class="profil_i color_red icon-star-half-alt"></i>
-		             		  			</p> --><br>
-			             		   			
-			             		   			
-
-			             		   			
-			             		   			
-			             		   			<li><p>{{ $journalist->available }}</p><br>
-			             		   				<label>Je suis disponible</label><br>
-			             		   				<input name="available" type="checkbox">
-			             		   			
-			             		   			</li>
-
-			             		   			
-			             		   			
-	             		   				</ul>	
-
-	             		   				
-
-	             		   				<ul class="list-inline">
-			             		   			<li>400 €<input type="text" placeholder="Tarif" id="price" name="price" class="r_corners color_grey w_full fw_light" value="@if( is_object( $journalist ) && isset( $journalist->price ) && ! old('price') ){{ $journalist->price }}@else{{ old('price') }}@endif"></li>
-			             		   			
-			             		   			
-			             		   			
-			             		   			
-			             		   			
-	             		   				</ul>		
-	             		   		</div>
+		             		  	
 
 		             		  </div>
-		             		 </div>
-	             		   
+	             		 	 <div class="row col-lg-4 col-md-4 col-sm-4 f_right m_bottom_10 m_left_15">
+	             		   		<div class="col-xs-12">	
+	             		   			<button class="button_type_3 color_purple r_corners tt_uppercase fs_medium m_top_20 tr_all f_left m_right_10 m_md_bottom_10 ">Contacter le journaliste</button>
+	             		   		</div>
+	             		   		<!-- Tarif / Dispo -->
+	             		   		<div class="col-xs-12">		
+		             		  			<ul class="m_top_10 list-inline">
+			             		  			<li class="col-xs-4">
+				             		  			<ul >
+					             		   			<li class="h4">Tarif</li>
+					             		   			<li class="h4 fw_light"><input type="text" placeholder="Tarif" id="price" name="price" class="r_corners color_grey w_full fw_light" value="@if( is_object( $journalist ) && isset( $journalist->price ) && ! old('price') ){{ $journalist->price }}@else{{ old('price') }}@endif"></li>
+					             		   		</ul>
+					             		   	</li>
+					             		   
+					             		   	<li class="col-xs-6 m_left_15">
+			             		   				<ul>
+					             		   			<li class="h4">Disponibilité</li>
+					             		   			<li class="h4 fw_light">{{ $journalist->available }}
+			             		   				Je suis disponible<br>
+			             		   				<input name="available" type="checkbox"></li>
+			             		   				</ul>
+			             		   			</li>
+		             		   			</ul>		
+	             		   			</div>
+	             		  		</div>
 
-	             		  
+	             		  	</div>
+	             		  </div>
 
-	             	</div>
-	             </div>
+	              </div>
 	        
 			
 	         <!-- TAGS et DESCRIPTIONS -->
@@ -144,46 +114,38 @@
 				     		</div>
 				      
 
-				     		<!-- Description -->
+				     	<!-- Description -->
 						    <div class="description col-lg-8 col-md-8 col-sm-8  m_bottom_30" >
-	                       
-		                       <p ><h5 class="m_bottom_20 ">{{ $journalist->description }}</h5></p>
-		                       <!-- <textarea id="desription" name="description" class="r_corners color_grey w_full fw_light" value="@if( is_object( $journalist ) && isset( $journalist->description ) && ! old('description') ){{ $journalist->description }}@else{{ old('description') }}@endif" required></textarea> -->
-		                       <!-- {{$journalist->description}} -->
+	                       		
+		                       <p ><h5 class="m_bottom_20 ">Quelques mots pour me décrire</h5></p>
+		                       <p class="fw_light">{{ $journalist->description }}
 		                       
-		                       
-
 		                       
 		                       </p>
 	                       
 	                     	</div>  
 	                     	
 	                     	<!-- Expériences -->
-	                     	<div class="f_right description col-lg-8 col-md-8 col-sm-8  m_bottom_30" >
+	                     	<div class=" description col-lg-8 col-md-8 col-sm-8  m_bottom_30" >
 	                       
-		                       <h5 class="m_bottom_20 ">{{ $experience->title }}</h5>
-
-		                       		<!-- <p class="fw_ex_bold color_purple m_bottom_10 ">
-		                       			<input type="text" placeholder="Entreprise" id="title" name="title" class="fw_ex_bold color_purple m_bottom_10 " value="@if( is_object( $experience ) && isset( $experience->title ) && ! old('title') ){{ $experience->title }}@else{{ old('title') }}@endif" required>
-		                       		</p> -->
-
-
-		                       		<textarea>{{ $experience->resume }}</textarea>
-		                       		<!-- <textarea type="text" placeholder="Résumé" id="resume" name="resume" class="r_corners color_grey w_full fw_light" value="@if( is_object( $experience ) && isset( $experience->resume ) && ! old('resume') ){{ $experience->resume }}@else{{ old('resume') }}@endif" required></textarea> -->
-
-		                       <h5 class="m_bottom_20 ">{{ $experience->start_date }}</h5>
-		                       <h5 class="m_bottom_20 ">{{ $experience->end_date }}</h5>
-		                       <!-- <p>
-		                       <input type="date" placeholder="Début" id="start_date" name="start_date" class="t_align_r m_bottom_10 " value="@if( is_object( $experience ) && isset( $experience->start_date ) && ! old('start_date') ){{ $experience->start_date }}@else{{ old('start_date') }}@endif" required></p>
-
-		                       <input type="date" placeholder="Fin" id="end_date" name="end_date" class="t_align_r m_bottom_10 " value="@if( is_object( $experience ) && isset( $experience->end_date ) && ! old('end_date') ){{ $experience->end_date }}@else{{ old('end_date') }}@endif" required></p> -->
+		                       <p ><h5 class="m_bottom_20 ">Expériences</h5></p>
 		                       
-		                       
-				                    
+		                       <div class="col-xs-6">
+		                       		<p class="fw_ex_bold color_purple m_bottom_10 ">{{ $experience->title }}</p>
+		                       </div>
+
+		                       <div class="  col-xs-6">
+		                       		<p class="t_align_r m_bottom_10 ">{{ $experience->start_date }} - {{ $experience->end_date }}</p>
+		                       </div>
+				                    <div >
+				                       <p class="fw_light"><textarea>{{ $experience->resume }}</textarea></p>
+	                       			</div>
 	                     	</div>  
+
+
 							
 							<!-- Portfolio -->
-	                     	<div class=" f_right description col-lg-8 col-md-8 col-sm-8  m_bottom_30" >
+	                     	<div class=" col-sm-offset-4 description col-lg-8 col-md-8 col-sm-8  m_bottom_30" >
 	                       
 		                       <p ><h5 class="m_bottom_20 ">Portfolio</h5></p>
 		                       <p ><img class="img-responsive" src="images/pirate.jpg">             
@@ -192,13 +154,18 @@
 	                     	</div>  
 
 							<!-- Formations -->
-	                     	<div class="f_right description col-lg-8 col-md-8 col-sm-8  m_bottom_30" >
+	                     	<div class="col-sm-offset-4 description col-lg-8 col-md-8 col-sm-8  m_bottom_30" >
 	                       
-		                       <p ><h5 class="m_bottom_20 ">{{ $formation->organisation }}</h5><!-- <textarea type="text" placeholder="Formation" id="organisation" name="organisation" class="r_corners color_grey w_full fw_light" value="@if( is_object( $formation ) && isset( $formation->organisation ) && ! old('organisation') ){{ $formation->organisation }}@else{{ old('organisation') }}@endif" required></textarea></p> -->
+		                       <p ><h5 class="m_bottom_20 ">Formations</h5><!-- <textarea type="text" placeholder="Formation" id="organisation" name="organisation" class="r_corners color_grey w_full fw_light" value="@if( is_object( $formation ) && isset( $formation->organisation ) && ! old('organisation') ){{ $formation->organisation }}@else{{ old('organisation') }}@endif" required></textarea></p> -->
 
 		                       <!-- organisation = cv -->
-
-		                       
+		                       <div class="col-xs-6">
+		                       		<p class="fw_ex_bold color_purple m_bottom_10 ">{{ $formation->organisation }}</p>
+		                       </div>
+		                        <div class="  col-xs-6">
+		                       		<p class="t_align_r m_bottom_10 ">Janvier 2012 - Février 2015</p>
+		                       </div>
+		                       <hr>
 		                       
 		                       <div class="col-xs-6">
 		                       		<p class="fw_ex_bold color_purple m_bottom_10 ">WebForce3</p>
@@ -207,13 +174,13 @@
 		                       <div class="  col-xs-6">
 		                       		<p class="t_align_r m_bottom_10 ">Novembre 2016 - Février 2017</p>
 		                       </div>
-				                    <div class="col-xs-12">
+				                    <div >
 				                       <p class="fw_light">Développeur-intégrateur web </p>
-	                       			</div>
+	                       		</div>
 	                     	</div>  
 
 	                     	<!-- Recommandations -->
-	                     	<div class="f_right description col-lg-8 col-md-8 col-sm-8  m_bottom_30" >
+	                     	<div class="col-sm-offset-4 description col-lg-8 col-md-8 col-sm-8  m_bottom_30" >
 	                       
 		                       <p ><h5 class="m_bottom_20 ">Recommandations</h5></p>
 		                       
@@ -221,7 +188,7 @@
 	                       	</div>
 
 	                       	<!-- Langues -->
-	                     	<div class="f_right description col-lg-8 col-md-8 col-sm-8  m_bottom_30" >
+	                     	<div class="col-sm-offset-4 description col-lg-8 col-md-8 col-sm-8  m_bottom_30" >
 	                       
 		                       <p ><h5 class="m_bottom_20 ">Langues</h5></p>
 		                       

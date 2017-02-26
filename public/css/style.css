@@ -4805,3 +4805,78 @@ only screen and (min-resolution: 144 dpi){
 		background-size:14px 90px;
 	}
 }
+
+/* -----------------------------------
+
+	20. Personnalisation
+
+------------------------------------- */
+
+.profil {
+	padding: 8px ;
+}
+
+.profil_i {
+	padding-right: 10px ;
+}
+
+.profile_photo {
+    width: 300px;
+}
+
+.icon_size_4{
+	
+	color: coral;
+	font-size:26px;
+    margin-right: 5px;
+}
+
+.bg_color_white {
+    background-color: #fff;
+}
+
+.bg_color_grey {
+    background-color:#cbd0d4;
+}
+
+.description {
+    border-radius: 7px;
+    padding: 10px;
+    background-color: #fff;
+    
+}
+
+.descriptif {
+    padding-bottom: 20px;
+
+}
+
+.tags {
+    margin-bottom: 5px;
+}
+
+.esp_list {
+	width:100%;
+}
+
+.description {
+    
+    padding: 10px;
+    background-color: #fff;
+    
+}
+
+.gauche-texte {
+    
+   
+}
+
+.gauche-img {
+    float:left;
+   
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+	background-color: purple !important;
+}
+
