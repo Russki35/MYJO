@@ -166,13 +166,13 @@
 		                       			<input type="text" placeholder="Entreprise" id="title" name="title" class="fw_ex_bold color_purple m_bottom_10 " value="@if( is_object( $experience ) && isset( $experience->title ) && ! old('title') ){{ $experience->title }}@else{{ old('title') }}@endif" required>
 		                       		</p>
 
-		                       		<textarea type="text" placeholder="Résumé" id="resume" name="resume" class="r_corners color_grey w_full fw_light" value="@if( is_object( $experience ) && isset( $experience->resume ) && ! old('resume') ){{ $experience->resume }}@else{{ old('resume') }}@endif" required></textarea>
+		                       		<textarea type="text" placeholder="Décrivez vos expériences professionnelles" id="resume" name="resume" class="r_corners color_grey w_full fw_light" value="@if( is_object( $experience ) && isset( $experience->resume ) && ! old('resume') ){{ $experience->resume }}@else{{ old('resume') }}@endif" required></textarea>
 
 		                       <h5 class="m_bottom_20 ">Période</h5>
 		                       <p>
-		                       <input type="date" placeholder="Début" id="start_date" name="start_date" class="t_align_r m_bottom_10 " value="@if( is_object( $experience ) && isset( $experience->start_date ) && ! old('start_date') ){{ $experience->start_date }}@else{{ old('start_date') }}@endif" required></p>
+		                       		<input type="date" placeholder="Début" id="start_date" name="start_date" class="t_align_r m_bottom_10 " value="@if( is_object( $experience ) && isset( $experience->start_date ) && ! old('start_date') ){{ $experience->start_date }}@else{{ old('start_date') }}@endif" required></p>
 
-		                       <input type="date" placeholder="Fin" id="end_date" name="end_date" class="t_align_r m_bottom_10 " value="@if( is_object( $experience ) && isset( $experience->end_date ) && ! old('end_date') ){{ $experience->end_date }}@else{{ old('end_date') }}@endif" required></p>
+		                       	<input type="date" placeholder="Fin" id="end_date" name="end_date" class="t_align_r m_bottom_10 " value="@if( is_object( $experience ) && isset( $experience->end_date ) && ! old('end_date') ){{ $experience->end_date }}@else{{ old('end_date') }}@endif" required></p>
 		                       
 		                       
 				                    
@@ -190,13 +190,16 @@
 							<!-- Formations -->
 	                     	<div class="f_right description col-lg-8 col-md-8 col-sm-8  m_bottom_30" >
 	                       
-		                       <p ><h5 class="m_bottom_20 ">Formations</h5><textarea type="text" placeholder="Formation" id="organisation" name="organisation" class="r_corners color_grey w_full fw_light" value="@if( is_object( $formation ) && isset( $formation->organisation ) && ! old('organisation') ){{ $formation->organisation }}@else{{ old('organisation') }}@endif" required></textarea></p>
+		                       <p ><h5 class="m_bottom_20 ">Formations</h5>
+
+
+		                       <textarea type="text" placeholder="Décrivez en détail vos études et diplômes obtenus" id="organisation" name="organisation" class="r_corners color_grey w_full fw_light" value="@if( is_object( $formation ) && isset( $formation->organisation ) && ! old('organisation') ){{ $formation->organisation }}@else{{ old('organisation') }}@endif" required></textarea></p>
 
 		                       <!-- organisation = cv -->
 
 		                       
 		                       
-		                       <div class="col-xs-6">
+		                       <!-- <div class="col-xs-6">
 		                       		<p class="fw_ex_bold color_purple m_bottom_10 ">WebForce3</p>
 		                       </div>
 
@@ -205,7 +208,7 @@
 		                       </div>
 				                    <div class="col-xs-12">
 				                       <p class="fw_light">Développeur-intégrateur web </p>
-	                       			</div>
+	                       			</div> -->
 	                     	</div>  
 
 	                     	<!-- Recommandations -->

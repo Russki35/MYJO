@@ -128,6 +128,16 @@
                                                 </li>
 
                                             @else
+
+                                                <!-- <li class="container3d relative f_xs_none m_xs_bottom_5">
+
+                                                        <a href="#" style="cursor:pointer" class="color_dark fs_large relative r_xs_corners">Consulter les profils
+                                                        </a>
+                                                </li> -->
+
+                                                
+
+
                                                 <li class="container3d relative f_xs_none m_xs_bottom_5">
 
                                                         <a style="cursor:pointer" class="color_dark fs_large relative r_xs_corners" data-toggle="modal" data-target="#inscription">S'inscrire
