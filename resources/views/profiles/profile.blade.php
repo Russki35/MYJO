@@ -138,7 +138,7 @@
 		                       		<p class="t_align_r m_bottom_10 ">{{ $experience->start_date }} - {{ $experience->end_date }}</p>
 		                       </div>
 				                    <div >
-				                       <p class="fw_light"><textarea>{{ $experience->resume }}</textarea></p>
+				                       <p class="fw_ex_bold color_purple m_bottom_10 ">{{ $experience->resume }}</p>
 	                       			</div>
 	                     	</div>  
 
