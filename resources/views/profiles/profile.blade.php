@@ -56,10 +56,8 @@
 		             		   			</ul>		
 	             		   			</div>
 	             		  		</div>
-
 	             		  	</div>
 	             		  </div>
-
 	              </div>
 	        
 			
@@ -68,7 +66,6 @@
 			<div class="bg_light_3 section_offset-3">
 				<div class="container ">
 					<div class="row">
-
 				       		<div class="col-lg-4 col-md-4 col-sm-4 m_xs_bottom_30">
 				         		<div class="row">
 				          
@@ -84,11 +81,9 @@
 									        <li class="tags button_type_1 color_blue transparent r_corners fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Actualité</li>
 									    </ul>   
 						           </aside >
-
 						           <aside class=" col-xs-12 h3 color_pink">
 						           		Radio
 						           </aside>
-
 						           <aside class="col-xs-12 color_pink">
 						           		<ul>
 									        <li class="tags button_type_1 color_pink transparent r_corners fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Histoire</li>
@@ -96,24 +91,20 @@
 									        
 									        <li class="tags button_type_1  color_pink transparent r_corners fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Actualité</li>
 									     </ul>   
-
 						           </aside>
 			          			 <aside class=" col-xs-12 h3 color_purple">
 						           		Web et presse écrite
 						           </aside>
-
 						           <aside class="col-xs-12 color_purple">
 						           		<ul>
 									        <li class="tags button_type_1 color_purple transparent r_corners fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Auto</li>
 							        		<li class="tags button_type_1 color_purple transparent r_corners fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Sport</li>
 							        		<li class="tags button_type_1 color_purple transparent r_corners fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Société</li>
 									     </ul>   
-
 						           </aside>
 				         		</div>
 				     		</div>
 				      
-
 				     	<!-- Description -->
 						    <div class="description col-lg-8 col-md-8 col-sm-8  m_bottom_30" >
 	                       		
@@ -133,7 +124,6 @@
 		                       <div class="col-xs-6">
 		                       		<p class="fw_ex_bold color_purple m_bottom_10 ">{{ $experience->title }}</p>
 		                       </div>
-
 		                       <div class="  col-xs-6">
 		                       		<p class="t_align_r m_bottom_10 ">{{ $experience->start_date }} - {{ $experience->end_date }}</p>
 		                       </div>
@@ -141,8 +131,6 @@
 				                       <p class="fw_light">{{ $experience->resume }}</p>
 	                       			</div>
 	                     	</div>  
-
-
 							
 							<!-- Portfolio -->
 	                     	<div class=" col-sm-offset-4 description col-lg-8 col-md-8 col-sm-8  m_bottom_30" >
@@ -152,41 +140,20 @@
 		                       </p>
 	                       
 	                     	</div>  
-
 							<!-- Formations -->
 	                     	<div class="col-sm-offset-4 description col-lg-8 col-md-8 col-sm-8  m_bottom_30" >
 	                       
 		                       <p ><h5 class="m_bottom_20 ">Formations</h5><!-- <textarea type="text" placeholder="Formation" id="organisation" name="organisation" class="r_corners color_grey w_full fw_light" value="@if( is_object( $formation ) && isset( $formation->organisation ) && ! old('organisation') ){{ $formation->organisation }}@else{{ old('organisation') }}@endif" required></textarea></p> -->
-
 		                       <!-- organisation = cv -->
 		                       <div class="col-xs-6">
-		                       		<p class="fw_ex_bold color_purple m_bottom_10 ">{{ $formation->organisation }}</p>
+		                       		<p class="fw_light">{{ $formation->organisation }}</p>
 		                       </div>
-		                        <div class="  col-xs-6">
-		                       		<p class="t_align_r m_bottom_10 ">Janvier 2012 - Février 2015</p>
-		                       </div>
-		                       <hr>
-		                       
-		                       <div class="col-xs-6">
-		                       		<p class="fw_ex_bold color_purple m_bottom_10 ">WebForce3</p>
-		                       </div>
-
-		                       <div class="  col-xs-6">
-		                       		<p class="t_align_r m_bottom_10 ">Novembre 2016 - Février 2017</p>
-		                       </div>
-				                    <div >
-				                       <p class="fw_light">Développeur-intégrateur web </p>
-	                       		</div>
-	                     	</div>  
-
-	                     	<!-- Recommandations -->
-	                     	<div class="col-sm-offset-4 description col-lg-8 col-md-8 col-sm-8  m_bottom_30" >
+		                        
 	                       
 		                       <p ><h5 class="m_bottom_20 ">Recommandations</h5></p>
 		                       
 		                       
 	                       	</div>
-
 	                       	<!-- Langues -->
 	                     	<div class="col-sm-offset-4 description col-lg-8 col-md-8 col-sm-8  m_bottom_30" >
 	                       
@@ -197,11 +164,8 @@
 		                       </a>
 		                       
 	                       	</div>
-
-
 	                     	 
       					</div> <!-- Fin de row -->
-
 				</div>
 			</div>
 	</form>
