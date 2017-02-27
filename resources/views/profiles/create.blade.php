@@ -30,7 +30,7 @@
 
 		             		  			<div>
 											<label class="profil">Prénom</label>
-		             		  					<input type="text" placeholder="Votre prénom" id="firstname" name="firstname" class="r_corners color_grey w_full fw_light" value="@if( is_object( $journalist ) && isset( $journalist->firstname ) && ! old('firstname') ){{ $journalist->firstname }}@else{{ old('lastname') }}@endif" required>
+		             		  					<input type="text" placeholder="Votre prénom" id="firstname" name="firstname" class="r_corners color_grey w_full fw_light" value="@if( is_object( $journalist ) && isset( $journalist->firstname ) && ! old('firstname') ){{ $journalist->firstname }}@else{{ old('firstname') }}@endif" required>
 		             		  			</div>
 
 		             		  				<hr>

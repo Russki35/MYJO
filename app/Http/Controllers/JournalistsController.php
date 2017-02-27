@@ -13,7 +13,7 @@ use Carbon\Carbon;
 
 class JournalistsController extends Controller
 {	
-	public function show_old()
+	/*public function show_old()
 	{	
 		$id = Auth::id(); // Arnaque pou récupérer l'id du mec connecté
 
@@ -26,30 +26,58 @@ class JournalistsController extends Controller
 		
 			// 3 - On peut enfin checker dans la table journaliste !
 		$journalist = Journalist::find($id_journalist);
-		return view('profiles.profile', compact('journalist'));
-	}
 
-	public function show(Journalist $journalist)
+		return view('profiles.profile', compact('journalist'));
+	}*/
+
+	public function showProfileSomeone(Journalist $journalist)
 	{
+
+		
+		
 		$user_id = $journalist->user_id;
+		
 		//dd($journalist);
 		//Ici on appelle toutes les données de la table journalist, on choisi au détail les infos souhaitées directement en les appelant dans la vue
 		
-		$formation = Formations::where('user_id', $user_id)->first();
+		
 		$experience = Experiences::where('user_id', $user_id)->first();
+		//dd($experience);
+		$formation = Formations::where('user_id', $user_id)->first();
 		//$journalist = Journalist::where('user_id', $user_id)->first();
 		$user = User::where('id', $user_id)->first();//ajouté 20h36*/
+		/*dd($formation);
+		dd($experience);*/
 
 		return view('profiles.profile', compact('journalist','experience','formation','user'));
+
 		
 	}
 
-	public function edit(User $user)
+	public function showMyProfile()
+	{
+
+		$user_id = Auth::user()->id;
+		//point commun avec showProfileSomeone, les deux affichent un profil
+		$experience = Experiences::where('user_id', $user_id)->first();
+		//dd($experience);
+		$formation = Formations::where('user_id', $user_id)->first();
+		$journalist = Journalist::where('user_id', $user_id)->first();
+		$user = User::where('id', $user_id)->first();
+
+		return view('profiles.profile', compact('journalist','experience','formation','user'));
+
+
+	}
+
+
+
+	/*public function edit(User $user)
 	{
 		$journalist = Journalist::find($journalist);
 		return view('profiles.edit', compact('journalist'));
 
-	}
+	}*/
 
 	public function create(User $user)
 	{
@@ -180,6 +208,9 @@ class JournalistsController extends Controller
 		else 
 		{
 			$datas = [
+			
+				'firstname' => request()->firstname,//ajouté 21h18
+				'lastname' => request()->lastname,
 				'profile_title' => request()->profile_title,
 				'location' => request()->location,
 				'price' => request()->price,
