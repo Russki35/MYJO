@@ -12,27 +12,10 @@ use App\User;
 use Carbon\Carbon;
 
 class JournalistsController extends Controller
-{	
-	/*public function show_old()
-	{	
-		$id = Auth::id(); // Arnaque pou récupérer l'id du mec connecté
-
-		//check dans user_journalist quel id_journalist where id_user=$id stocké dans $id_journalist
-			// 1 - on cherche avec condition dans la jointure
-		$user_journalist_request = User_journalist::where('id_user', $id)->get();
-
-			// 2 - Ici on épluche le tableau (s'aider du dd($user_journalist_request);) afin de trouver la bonne info dans le tableau multidimensionnel
-		$id_journalist = $user_journalist_request[0]['id_journalist'];
-		
-			// 3 - On peut enfin checker dans la table journaliste !
-		$journalist = Journalist::find($id_journalist);
-
-		return view('profiles.profile', compact('journalist'));
-	}*/
+{
 
 	public function showProfileSomeone(Journalist $journalist)
 	{
-
 		
 		
 		$user_id = $journalist->user_id;
@@ -48,15 +31,11 @@ class JournalistsController extends Controller
 		$user = User::where('id', $user_id)->first();//ajouté 20h36*/
 		/*dd($formation);
 		dd($experience);*/
-
 		return view('profiles.profile', compact('journalist','experience','formation','user'));
-
 		
 	}
-
 	public function showMyProfile()
 	{
-
 		$user_id = Auth::user()->id;
 		//point commun avec showProfileSomeone, les deux affichent un profil
 		$experience = Experiences::where('user_id', $user_id)->first();
@@ -64,20 +43,17 @@ class JournalistsController extends Controller
 		$formation = Formations::where('user_id', $user_id)->first();
 		$journalist = Journalist::where('user_id', $user_id)->first();
 		$user = User::where('id', $user_id)->first();
-
 		return view('profiles.profile', compact('journalist','experience','formation','user'));
-
-
 	}
 
 
 
-	/*public function edit(User $user)
+	public function edit(User $user)
 	{
 		$journalist = Journalist::find($journalist);
 		return view('profiles.edit', compact('journalist'));
 
-	}*/
+	}
 
 	public function create(User $user)
 	{
@@ -208,9 +184,6 @@ class JournalistsController extends Controller
 		else 
 		{
 			$datas = [
-			
-				'firstname' => request()->firstname,//ajouté 21h18
-				'lastname' => request()->lastname,
 				'profile_title' => request()->profile_title,
 				'location' => request()->location,
 				'price' => request()->price,
