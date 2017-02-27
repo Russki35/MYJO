@@ -80,8 +80,8 @@
 									        <li class="tags button_type_1 color_blue transparent r_corners fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Histoire</li>
 									        <li class="tags button_type_1 color_blue transparent r_corners fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Société</li>
 									        <li class="tags button_type_1 color_blue transparent r_corners fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Auto</li>
-									        <li class="tags button_type_1 color_blue transparent r_corners fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Tipiak</li>
-									        <li class="tags button_type_1 color_blue transparent r_corners fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Youporn</li>
+									        <li class="tags button_type_1 color_blue transparent r_corners fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Sport</li>
+									        <li class="tags button_type_1 color_blue transparent r_corners fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Actualité</li>
 									    </ul>   
 						           </aside >
 
@@ -94,7 +94,7 @@
 									        <li class="tags button_type_1 color_pink transparent r_corners fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Histoire</li>
 									        <li class="tags button_type_1 color_pink transparent r_corners fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Société</li>
 									        
-									        <li class="tags button_type_1  color_pink transparent r_corners fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Youporn</li>
+									        <li class="tags button_type_1  color_pink transparent r_corners fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Actualité</li>
 									     </ul>   
 
 						           </aside>
@@ -105,8 +105,8 @@
 						           <aside class="col-xs-12 color_purple">
 						           		<ul>
 									        <li class="tags button_type_1 color_purple transparent r_corners fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Auto</li>
-							        		<li class="tags button_type_1 color_purple transparent r_corners fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Tipiak</li>
-							        		<li class="tags button_type_1 color_purple transparent r_corners fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Youporn</li>
+							        		<li class="tags button_type_1 color_purple transparent r_corners fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Sport</li>
+							        		<li class="tags button_type_1 color_purple transparent r_corners fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Société</li>
 									     </ul>   
 
 						           </aside>

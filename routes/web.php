@@ -19,9 +19,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/profile/', 'JournalistsController@show')->name('profile_profile');
+//Renvoie sur mon profil lorsque connecté
+Route::get('/profile/', 'JournalistsController@showMyProfile')->name('profile_profile');
 
-Route::get('/profile/{journalist}', 'JournalistsController@show');
+//Renvoie vers un profil tiers, depuis display
+Route::get('/profile/{journalist}', 'JournalistsController@showProfileSomeone');
 
 Route::get('/createprofile/', 'JournalistsController@create')->name('create_profile');
 
