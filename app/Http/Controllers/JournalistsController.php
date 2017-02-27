@@ -29,16 +29,16 @@ class JournalistsController extends Controller
 		return view('profiles.profile', compact('journalist'));
 	}
 
-	public function show()
+	public function show(Journalist $journalist)
 	{
-		$user_id = Auth::user()->id;
+		$user_id = $journalist->user_id;
 		//dd($journalist);
 		//Ici on appelle toutes les données de la table journalist, on choisi au détail les infos souhaitées directement en les appelant dans la vue
 		
 		$formation = Formations::where('user_id', $user_id)->first();
 		$experience = Experiences::where('user_id', $user_id)->first();
-		$journalist = Journalist::where('user_id', $user_id)->first();
-		/*$user = Users::where('user_id', $user_id)->first();//ajouté 20h36*/
+		//$journalist = Journalist::where('user_id', $user_id)->first();
+		$user = User::where('id', $user_id)->first();//ajouté 20h36*/
 
 		return view('profiles.profile', compact('journalist','experience','formation','user'));
 		

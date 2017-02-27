@@ -157,7 +157,7 @@
 
                                                 <li id="monlien">
 
-                                                        <a  href="/display" class="select_button_right color_dark f_xs_none bg_light color_light_hover fs_medium relative tt_uppercase f_left">Parcourir les profils</a>
+                                                        <a  href="display" class="select_button_right color_dark f_xs_none bg_light color_light_hover fs_medium relative tt_uppercase f_left">Parcourir les profils</a>
 
                                                 </li>
                                                 <!-- style="cursor:pointer" -->
