@@ -107,16 +107,16 @@
         },
         {
             "name": "backpack/crud",
-            "version": "3.2.3",
+            "version": "3.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Backpack/CRUD.git",
-                "reference": "add4ed6c491caeef7be85d35dd7bff0a60af8591"
+                "reference": "5b2f1a08012e2e6e6e53d938b9f21d07b08927ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Backpack/CRUD/zipball/add4ed6c491caeef7be85d35dd7bff0a60af8591",
-                "reference": "add4ed6c491caeef7be85d35dd7bff0a60af8591",
+                "url": "https://api.github.com/repos/Laravel-Backpack/CRUD/zipball/5b2f1a08012e2e6e6e53d938b9f21d07b08927ea",
+                "reference": "5b2f1a08012e2e6e6e53d938b9f21d07b08927ea",
                 "shasum": ""
             },
             "require": {
@@ -167,7 +167,7 @@
                 "read",
                 "update"
             ],
-            "time": "2017-02-14T09:24:09+00:00"
+            "time": "2017-02-24T09:28:43+00:00"
         },
         {
             "name": "barryvdh/elfinder-flysystem-driver",
@@ -312,16 +312,16 @@
         },
         {
             "name": "doctrine/annotations",
-            "version": "v1.3.1",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "bd4461328621bde0ae6b1b2675fbc6aca4ceb558"
+                "reference": "54cacc9b81758b14e3ce750f205a393d52339e97"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/bd4461328621bde0ae6b1b2675fbc6aca4ceb558",
-                "reference": "bd4461328621bde0ae6b1b2675fbc6aca4ceb558",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/54cacc9b81758b14e3ce750f205a393d52339e97",
+                "reference": "54cacc9b81758b14e3ce750f205a393d52339e97",
                 "shasum": ""
             },
             "require": {
@@ -330,7 +330,7 @@
             },
             "require-dev": {
                 "doctrine/cache": "1.*",
-                "phpunit/phpunit": "^5.6.1"
+                "phpunit/phpunit": "^5.7"
             },
             "type": "library",
             "extra": {
@@ -376,7 +376,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2016-12-30T15:59:45+00:00"
+            "time": "2017-02-24T16:22:25+00:00"
         },
         {
             "name": "doctrine/cache",
@@ -824,16 +824,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "04a6d1a00ea5da0727ee94309a9f0d3dbaecb569"
+                "reference": "0d6c7ca039329247e4f0f8f8f6506810e8248855"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/04a6d1a00ea5da0727ee94309a9f0d3dbaecb569",
-                "reference": "04a6d1a00ea5da0727ee94309a9f0d3dbaecb569",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/0d6c7ca039329247e4f0f8f8f6506810e8248855",
+                "reference": "0d6c7ca039329247e4f0f8f8f6506810e8248855",
                 "shasum": ""
             },
             "require": {
@@ -885,7 +885,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2017-02-21T01:20:32+00:00"
+            "time": "2017-02-27T10:51:17+00:00"
         },
         {
             "name": "intervention/image",
@@ -1095,16 +1095,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.4.12",
+            "version": "v5.4.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "707f32d32dce58232f7a860e0a1d62caf6f9dbfc"
+                "reference": "3eebfaa759156e06144892b00bb95304aa5a71c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/707f32d32dce58232f7a860e0a1d62caf6f9dbfc",
-                "reference": "707f32d32dce58232f7a860e0a1d62caf6f9dbfc",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/3eebfaa759156e06144892b00bb95304aa5a71c1",
+                "reference": "3eebfaa759156e06144892b00bb95304aa5a71c1",
                 "shasum": ""
             },
             "require": {
@@ -1220,7 +1220,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-02-15T14:31:32+00:00"
+            "time": "2017-02-22T16:07:04+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1738,16 +1738,16 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v2.0.4",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "a9b97968bcde1c4de2a5ec6cbd06a0f6c919b46e"
+                "reference": "b5ea1ef3d8ff10c307ba8c5945c2f134e503278f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/a9b97968bcde1c4de2a5ec6cbd06a0f6c919b46e",
-                "reference": "a9b97968bcde1c4de2a5ec6cbd06a0f6c919b46e",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/b5ea1ef3d8ff10c307ba8c5945c2f134e503278f",
+                "reference": "b5ea1ef3d8ff10c307ba8c5945c2f134e503278f",
                 "shasum": ""
             },
             "require": {
@@ -1782,7 +1782,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2016-11-07T23:38:38+00:00"
+            "time": "2017-02-27T17:11:23+00:00"
         },
         {
             "name": "prologue/alerts",
@@ -2134,16 +2134,16 @@
         },
         {
             "name": "studio-42/elfinder",
-            "version": "2.1.21",
+            "version": "2.1.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Studio-42/elFinder.git",
-                "reference": "a6a534ffe558b203f46511dc927054ccc9d006e0"
+                "reference": "a41ea2f9640b6a7415d438568c708e9bcfc2e653"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Studio-42/elFinder/zipball/a6a534ffe558b203f46511dc927054ccc9d006e0",
-                "reference": "a6a534ffe558b203f46511dc927054ccc9d006e0",
+                "url": "https://api.github.com/repos/Studio-42/elFinder/zipball/a41ea2f9640b6a7415d438568c708e9bcfc2e653",
+                "reference": "a41ea2f9640b6a7415d438568c708e9bcfc2e653",
                 "shasum": ""
             },
             "require": {
@@ -2188,7 +2188,7 @@
             ],
             "description": "File manager for web",
             "homepage": "http://elfinder.org",
-            "time": "2017-02-08T13:49:35+00:00"
+            "time": "2017-02-24T15:28:23+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -3583,23 +3583,23 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "4.0.5",
+            "version": "4.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "c19cfc7cbb0e9338d8c469c7eedecc2a428b0971"
+                "reference": "ca060f645beeddebedb1885c97bf163e93264c35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/c19cfc7cbb0e9338d8c469c7eedecc2a428b0971",
-                "reference": "c19cfc7cbb0e9338d8c469c7eedecc2a428b0971",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/ca060f645beeddebedb1885c97bf163e93264c35",
+                "reference": "ca060f645beeddebedb1885c97bf163e93264c35",
                 "shasum": ""
             },
             "require": {
                 "php": "^5.6 || ^7.0",
                 "phpunit/php-file-iterator": "~1.3",
                 "phpunit/php-text-template": "~1.2",
-                "phpunit/php-token-stream": "^1.4.2",
+                "phpunit/php-token-stream": "^1.4.2 || ^2.0",
                 "sebastian/code-unit-reverse-lookup": "~1.0",
                 "sebastian/environment": "^1.3.2 || ^2.0",
                 "sebastian/version": "~1.0|~2.0"
@@ -3642,7 +3642,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-01-20T15:06:43+00:00"
+            "time": "2017-02-23T07:38:02+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -3734,25 +3734,30 @@
         },
         {
             "name": "phpunit/php-timer",
-            "version": "1.0.8",
+            "version": "1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-timer.git",
-                "reference": "38e9124049cf1a164f1e4537caf19c99bf1eb260"
+                "reference": "3dcf38ca72b158baf0bc245e9184d3fdffa9c46f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/38e9124049cf1a164f1e4537caf19c99bf1eb260",
-                "reference": "38e9124049cf1a164f1e4537caf19c99bf1eb260",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/3dcf38ca72b158baf0bc245e9184d3fdffa9c46f",
+                "reference": "3dcf38ca72b158baf0bc245e9184d3fdffa9c46f",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": "^5.3.3 || ^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4|~5"
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
             "autoload": {
                 "classmap": [
                     "src/"
@@ -3774,20 +3779,20 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2016-05-12T18:03:57+00:00"
+            "time": "2017-02-26T11:10:40+00:00"
         },
         {
             "name": "phpunit/php-token-stream",
-            "version": "1.4.9",
+            "version": "1.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "3b402f65a4cc90abf6e1104e388b896ce209631b"
+                "reference": "e03f8f67534427a787e21a385a67ec3ca6978ea7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/3b402f65a4cc90abf6e1104e388b896ce209631b",
-                "reference": "3b402f65a4cc90abf6e1104e388b896ce209631b",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/e03f8f67534427a787e21a385a67ec3ca6978ea7",
+                "reference": "e03f8f67534427a787e21a385a67ec3ca6978ea7",
                 "shasum": ""
             },
             "require": {
@@ -3823,7 +3828,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2016-11-15T14:06:22+00:00"
+            "time": "2017-02-27T10:12:30+00:00"
         },
         {
             "name": "phpunit/phpunit",

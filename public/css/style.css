@@ -4582,7 +4582,13 @@ input[class*="_limit"]{
 	}
 	.f_xs_none,
 	.hr_list > .f_xs_none{
-		float:none;
+		
+	}
+
+	/*slider accueil en xs */
+	.f_xs_none.select_button_left,
+	.hr_list > .f_xs_none.select_button_left{
+		margin-bottom: 10px;
 	}
 	.d_xs_none,
 	.main_menu > li > a:after,
@@ -4879,4 +4885,5 @@ only screen and (min-resolution: 144 dpi){
 .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
 	background-color: purple !important;
 }
+
 

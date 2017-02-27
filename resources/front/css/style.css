@@ -4880,6 +4880,12 @@ only screen and (min-resolution: 144 dpi){
 }
 
 
+/*slider page accueil en xs*/
+.f_xs_none.select_button_left,
+	.hr_list > .f_xs_none.select_button_left{
+		margin-bottom: 10px;
+	}
+
 
 
 

@@ -53,7 +53,7 @@
                     <div class="d_table w_full d_xs_block">
                         <!--logo-->
                         <div class="col-lg-2 col-md-2 col-sm-2 d_table_cell d_xs_block f_none v_align_m logo t_xs_align_c">
-                            <a href="index.html" class="d_inline_m m_xs_top_20 m_xs_bottom_20">
+                            <a href="{{route('home')}}" class="d_inline_m m_xs_top_20 m_xs_bottom_20">
                                 <h3>MyJo</h3>
                             </a>
                         </div>
@@ -76,18 +76,18 @@
                                                 </li>
 
                                                 <li class="container3d relative f_xs_none m_xs_bottom_5">
-                                                    <a class="color_dark fs_large relative r_xs_corners" href="pages_about.html">Compétences
+                                                    <a class="color_dark fs_large relative r_xs_corners" href="#">Compétences
                                                         <i class="icon-angle-down d_inline_m"></i>
                                                     </a>
                                                     <ul class="sub_menu r_xs_corners bg_light vr_list tr_all tr_xs_none trf_xs_none bs_xs_none d_xs_none">
                                                         <li>
-                                                            <a href="pages_about.html" class="d_block color_dark relative">Télévision</a>
+                                                            <a href="#" class="d_block color_dark relative">Télévision</a>
                                                         </li>
                                                         <li>
-                                                            <a href="pages_about.html" class="d_block color_dark relative">Radio</a>
+                                                            <a href="#" class="d_block color_dark relative">Radio</a>
                                                         </li>
                                                         <li>
-                                                            <a href="pages_about.html" class="d_block color_dark relative">Web et  presse écrite</a>
+                                                            <a href="#" class="d_block color_dark relative">Web et  presse écrite</a>
                                                         </li>
 
                                                     </ul>
@@ -100,13 +100,13 @@
                                                         </a>
                                                             <ul class="sub_menu r_xs_corners bg_light vr_list tr_all tr_xs_none trf_xs_none bs_xs_none d_xs_none">
                                                                 <li><!-- "/profile" -->
-                                                                    <a href="/MYJO/public/profile" class="d_block color_dark relative">Voir mon profil</a>
+                                                                    <a href="{{route('profile_profile')}}" class="d_block color_dark relative">Voir mon profil</a>
                                                                 </li>
                                                                 <!-- <li>
                                                                     <a href="/MYJO/public/edit" class="d_block color_dark relative">Editer mon profil</a>
                                                                 </li> -->
                                                                 <li>
-                                                                    <a href="/MYJO/public/createprofile" class="d_block color_dark relative">Editer mon profil</a>
+                                                                    <a href="{{route('create_profile')}}" class="d_block color_dark relative">Editer mon profil</a>
                                                                 </li>
                                                         
 
@@ -157,24 +157,24 @@
 
                                                 <li id="monlien">
 
-                                                        <a  href="display" class="select_button_right color_dark f_xs_none bg_light color_light_hover fs_medium relative tt_uppercase f_left">Parcourir les profils</a>
+                                                        <a  href="display" class="color_dark fs_large relative r_xs_corners">Parcourir les profils</a>
 
                                                 </li>
                                                 <!-- style="cursor:pointer" -->
 
                                                 <li class="container3d relative f_xs_none m_xs_bottom_5">
-                                                    <a class="color_dark fs_large relative r_xs_corners" href="pages_about.html">Média
+                                                    <a class="color_dark fs_large relative r_xs_corners" href="#">Média
                                                         <i class="icon-angle-down d_inline_m"></i>
                                                     </a>
                                                     <ul class="sub_menu r_xs_corners bg_light vr_list tr_all tr_xs_none trf_xs_none bs_xs_none d_xs_none">
                                                         <li>
-                                                            <a href="pages_about.html" class="d_block color_dark relative">Télévision</a>
+                                                            <a href="#" class="d_block color_dark relative">Télévision</a>
                                                         </li>
                                                         <li>
-                                                            <a href="pages_about.html" class="d_block color_dark relative">Radio</a>
+                                                            <a href="#" class="d_block color_dark relative">Radio</a>
                                                         </li>
                                                         <li>
-                                                            <a href="pages_about.html" class="d_block color_dark relative">Web et  presse écrite</a>
+                                                            <a href="#" class="d_block color_dark relative">Web et  presse écrite</a>
                                                         </li>
 
                                                     </ul>

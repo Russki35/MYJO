@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 Auth::routes();
 
@@ -23,7 +23,7 @@ Route::get('/home', 'HomeController@index');
 Route::get('/profile/', 'JournalistsController@showMyProfile')->name('profile_profile');
 
 //Renvoie vers un profil tiers, depuis display
-Route::get('/profile/{journalist}', 'JournalistsController@showProfileSomeone');
+Route::get('/profile/{journalist}', 'JournalistsController@showProfileSomeone')->name('profile_journalist');
 
 Route::get('/createprofile/', 'JournalistsController@create')->name('create_profile');
 
