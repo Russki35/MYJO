@@ -235,13 +235,17 @@ class JournalistsController extends Controller
 	public function showDisplay()
 	{
 		
-		/*$profile = profile::all();*/
-
-		
-		/*$journalist = Journalist::all();*/
 		
 
-		return view('profiles.display');
+		
+		$journalists = Journalist::all();
+
+		return view('profiles.display', [
+			'journalists' => $journalists
+
+
+
+			]);
 
 	}
 	//compact('journalist','experience','formation','user'));
