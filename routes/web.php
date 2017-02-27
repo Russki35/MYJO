@@ -19,13 +19,21 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/profile/', 'JournalistsController@show');
+//Renvoie sur mon profil lorsque connecté
+Route::get('/profile/', 'JournalistsController@showMyProfile')->name('profile_profile');
 
-Route::get('/profile/{journalist}', 'JournalistsController@show');
+//Renvoie vers un profil tiers, depuis display
+Route::get('/profile/{journalist}', 'JournalistsController@showProfileSomeone');
 
 Route::get('/createprofile/', 'JournalistsController@create')->name('create_profile');
 
 Route::post('/createprofile/', 'JournalistsController@store');
+
+//Ajouté 18h07
+/*Route::get('/displayprofile/', 'JournalistsController@showDisplay')->name('display_profile');*/
+
+
+Route::get('/display', 'JournalistsController@showDisplay');
 
 // post qui vient du bouton 'modifier' sur 'mon profil'
 

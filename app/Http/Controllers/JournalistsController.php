@@ -12,37 +12,41 @@ use App\User;
 use Carbon\Carbon;
 
 class JournalistsController extends Controller
-{	
-	public function show_old()
-	{	
-		$id = Auth::id(); // Arnaque pou récupérer l'id du mec connecté
+{
 
-		//check dans user_journalist quel id_journalist where id_user=$id stocké dans $id_journalist
-			// 1 - on cherche avec condition dans la jointure
-		$user_journalist_request = User_journalist::where('id_user', $id)->get();
-
-			// 2 - Ici on épluche le tableau (s'aider du dd($user_journalist_request);) afin de trouver la bonne info dans le tableau multidimensionnel
-		$id_journalist = $user_journalist_request[0]['id_journalist'];
-		
-			// 3 - On peut enfin checker dans la table journaliste !
-		$journalist = Journalist::find($id_journalist);
-		return view('profiles.profile', compact('journalist'));
-	}
-
-	public function show()
+	public function showProfileSomeone(Journalist $journalist)
 	{
-		$user_id = Auth::user()->id;
+		
+		
+		$user_id = $journalist->user_id;
+		
 		//dd($journalist);
 		//Ici on appelle toutes les données de la table journalist, on choisi au détail les infos souhaitées directement en les appelant dans la vue
 		
-		$formation = Formations::where('user_id', $user_id)->first();
+		
 		$experience = Experiences::where('user_id', $user_id)->first();
-		$journalist = Journalist::where('user_id', $user_id)->first();
-		/*$user = Users::where('user_id', $user_id)->first();//ajouté 20h36*/
-
+		//dd($experience);
+		$formation = Formations::where('user_id', $user_id)->first();
+		//$journalist = Journalist::where('user_id', $user_id)->first();
+		$user = User::where('id', $user_id)->first();//ajouté 20h36*/
+		/*dd($formation);
+		dd($experience);*/
 		return view('profiles.profile', compact('journalist','experience','formation','user'));
 		
 	}
+	public function showMyProfile()
+	{
+		$user_id = Auth::user()->id;
+		//point commun avec showProfileSomeone, les deux affichent un profil
+		$experience = Experiences::where('user_id', $user_id)->first();
+		//dd($experience);
+		$formation = Formations::where('user_id', $user_id)->first();
+		$journalist = Journalist::where('user_id', $user_id)->first();
+		$user = User::where('id', $user_id)->first();
+		return view('profiles.profile', compact('journalist','experience','formation','user'));
+	}
+
+
 
 	public function edit(User $user)
 	{
@@ -68,20 +72,6 @@ class JournalistsController extends Controller
 		// Retrouve l'id de l'utilisateur connecté
 		$user_id = Auth::user()->id;
 
-		//dd(request()->available);
-
-		/*$this->validate(request(), [
-
-			'title' => 'required', //required|min:3 -> minimum 3 caractères
-			'profile_title' => 'required',
-			'location' => 'required',
-			'seniority' => 'required',
-			'price' => 'required',
-			'experience' => 'required',
-			'description' => 'required'
-			
-
-		]);*/
 
 		//-------------------------------------
 		//             FORMATION
@@ -238,8 +228,29 @@ class JournalistsController extends Controller
 			$journalist->fill( $datas )->save();
 		}*/
 
-		return redirect()->route('create_profile');
+		//return redirect()->route('create_profile');
+		return redirect()->route('profile_profile');
 
 	}
-	
+
+	//Ajouté 18h28
+
+
+	public function showDisplay()
+	{
+		
+		
+
+		
+		$journalists = Journalist::all();
+
+		return view('profiles.display', [
+			'journalists' => $journalists
+
+
+
+			]);
+
+	}
+	//compact('journalist','experience','formation','user'));
 }
