@@ -76,7 +76,7 @@
 
                    					<div class="m_top_10 profil col-lg-2 col-sm-3 col-xs-6 ">
                    					    <p>							
-		             		  				<h5 class="m_bottom_5 ">{{$journalist->firstname}} {{$journalist->lastname}}</h5>
+		             		  				<h5 style="color: #41bedd;" class="m_bottom_5 ">{{$journalist->firstname}} {{$journalist->lastname}}</h5>
 		             		  				<h6 class="m_bottom_5 fw_light">{{$journalist->profile_title}}</h6>
 		             		  				<h6 class="m_bottom_5 fs_medium  m_bottom_20">{{$journalist->location}}</h6>
 		             		  			</p>
@@ -100,8 +100,17 @@
                    						<div class="col-xs-6">
                    							<!-- <p class="h4 fs_medium "></p> -->
                    							<h6 style="color: #41bedd;" class="m_bottom_20 ">Tarif journalier</h6>
-                   							<button type="button" class="m_bottom_20 btn btn-success btn-lg">{{$journalist->price}}</button>
+                   								<button type="button" class="m_bottom_20 btn btn-success btn-lg">{{$journalist->price}}</button>
+
+                   							<a href="profile/{{$journalist->id}}">
+                   								<button type="button" class="m_bottom_20 btn btn-success btn-lg">Voir profil de {{$journalist->firstname}} {{$journalist->lastname}}</button>
+                   							</a>
+
                    						</div>
+
+                   						
+                   							
+                   						
 
                    						<div class="col-xs-6">
                    							<p class="h4 fw_light ">{{$journalist->available}}<br>
