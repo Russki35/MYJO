@@ -67,6 +67,7 @@
 
 				     		<!-- DESCRIPTION -->
 
+				     		@foreach($journalists as $journalist)
 						    <div class=" recherche col-lg-9 col-md-9 col-sm-9 m_top_10 m_bottom_10" >
 	                       		<div >
 			                        <aside class="col-lg-2 col-sm-3 col-xs-6">
@@ -74,9 +75,9 @@
                    					</aside>
 
                    					<div class="m_top_10 profil col-lg-2 col-sm-3 col-xs-6 ">
-                   					    <p>	
-		             		  				<h5 class="m_bottom_5 ">Olivier Le Hénaff</h5>
-		             		  				<h6 class="m_bottom_5 fw_light">Rédacteur en chef</h6>
+                   					    <p>							
+		             		  				<h5 class="m_bottom_5 ">{{$journalist->firstname}} {{$journalist->lastname}}</h5>
+		             		  				<h6 class="m_bottom_5 fw_light">{{$journalist->profile_title}}</h6>
 		             		  				<h6 class="m_bottom_5 fs_medium  m_bottom_20">Paris</h6>
 		             		  			</p>
 		             		  			
@@ -109,7 +110,7 @@
 	                       		</div>
 	                     	</div>  
 	                     	
-	                     	
+	                     	@endforeach
 							
 
 
