@@ -78,7 +78,7 @@
                    					    <p>							
 		             		  				<h5 class="m_bottom_5 ">{{$journalist->firstname}} {{$journalist->lastname}}</h5>
 		             		  				<h6 class="m_bottom_5 fw_light">{{$journalist->profile_title}}</h6>
-		             		  				<h6 class="m_bottom_5 fs_medium  m_bottom_20">Paris</h6>
+		             		  				<h6 class="m_bottom_5 fs_medium  m_bottom_20">{{$journalist->location}}</h6>
 		             		  			</p>
 		             		  			
 		             		  				<p ><i class=" profil_i color_red icon-star-1"></i><i class="profil_i color_red icon-star-1"></i><i class="profil_i color_red icon-star-1"></i><i class="profil_i color_red icon-star-1"></i><i class="profil_i color_red icon-star-half-alt"></i>
@@ -87,23 +87,25 @@
                    					</div>
 
                    					<div class="col-sm-4 col-lg-5 col-xs-12 m_top_20">
-                   						<ul>
-									        <li class="tags button_type_1 color_purple transparent  fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Auto</li>
-							        		<li class="tags button_type_1 color_purple transparent  fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Tipiak</li>
-							        		<li class="tags button_type_1 color_purple transparent  fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Youporn</li><li class="tags button_type_1 color_purple transparent  fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Auto</li>
-							        		<li class="tags button_type_1 color_purple transparent  fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Tipiak</li>
-							        		<li class="tags button_type_1 color_purple transparent  fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Youporn</li>
-									     </ul>   
 
-                   					</div>
+                   						<p>
+                   							<h6 style="color: #41bedd;" class="m_bottom_20 ">Description</h6>
+                   							{{$journalist->description}}
+                   						</p>
+                   						  
+									</div>
+
                    					<div class="col-sm-2 col-lg-3 ">
+
                    						<div class="col-xs-6">
-                   							<p class="h4 fs_medium ">Tarif par jour</p>
-                   							<button type="button" class="m_bottom_20 btn btn-success btn-lg">400 €</button>
+                   							<!-- <p class="h4 fs_medium "></p> -->
+                   							<h6 style="color: #41bedd;" class="m_bottom_20 ">Tarif journalier</h6>
+                   							<button type="button" class="m_bottom_20 btn btn-success btn-lg">{{$journalist->price}}</button>
                    						</div>
+
                    						<div class="col-xs-6">
-                   							<p class="h4 fw_light ">Disponibilité <br>
-                   							<span class="h4"> Immédiate</span></p>
+                   							<p class="h4 fw_light ">{{$journalist->available}}<br>
+                   							<!-- <span class="h4"> Immédiate</span></p> -->
                    						</div>
                    					</div>
 			                      
@@ -113,7 +115,13 @@
 	                     	@endforeach
 							
 
-
+	                     	<!-- <ul>
+									        <li class="tags button_type_1 color_purple transparent  fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Auto</li>
+							        		<li class="tags button_type_1 color_purple transparent  fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Tipiak</li>
+							        		<li class="tags button_type_1 color_purple transparent  fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Youporn</li><li class="tags button_type_1 color_purple transparent  fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Auto</li>
+							        		<li class="tags button_type_1 color_purple transparent  fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Tipiak</li>
+							        		<li class="tags button_type_1 color_purple transparent  fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Youporn</li>
+									     </ul> --> 
 	                     	 
       					</div> <!-- Fin de row -->
 
