@@ -71,7 +71,7 @@
 						    <div class=" recherche col-lg-9 col-md-9 col-sm-9 m_top_10 m_bottom_10" >
 	                       		<div >
 			                        <aside class="col-lg-2 col-sm-3 col-xs-6">
-                        				<img class="img-rounded img-responsive" src="images/journalist.jpg" alt="">
+                        				<img src="{{ asset( $journalist->picture )}}" >
                    					</aside>
 
                    					<div class="m_top_10 profil col-lg-2 col-sm-3 col-xs-6 ">
@@ -124,13 +124,7 @@
 	                     	@endforeach
 							
 
-	                     	<!-- <ul>
-									        <li class="tags button_type_1 color_purple transparent  fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Auto</li>
-							        		<li class="tags button_type_1 color_purple transparent  fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Tipiak</li>
-							        		<li class="tags button_type_1 color_purple transparent  fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Youporn</li><li class="tags button_type_1 color_purple transparent  fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Auto</li>
-							        		<li class="tags button_type_1 color_purple transparent  fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Tipiak</li>
-							        		<li class="tags button_type_1 color_purple transparent  fs_medium tr_all f_left m_right_10 m_sm_bottom_10">Youporn</li>
-									     </ul> --> 
+	                     	 
 	                     	 
       					</div> <!-- Fin de row -->
 

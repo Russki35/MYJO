@@ -103,7 +103,7 @@
 	                     	<div class=" description col-xs-12 m_top_10" >
 	                       
 		                       <p ><h5 class="m_bottom_20 ">Portfolio</h5></p>
-		                       <p ><img class="img-responsive" src="images/pirate.jpg">             
+		                       <p ><img class="img-responsive" src="images/journalist.jpg">             
 		                       </p>
 	                       
 	                     	</div>  
@@ -135,7 +135,7 @@
 	                       	<!-- Langues -->
 	                     	<div class="description col-xs-12 m_top_10" >
 	                       
-		                       <p ><h5 class="m_bottom_20 ">Langues</h5></p>
+		                       
 		                       
 		                       <a href="/profile">
 		                       <button type="submit" class="btn btn-primary">Envoyer</button>
