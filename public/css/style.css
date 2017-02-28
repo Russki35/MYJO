@@ -4582,7 +4582,8 @@ input[class*="_limit"]{
 	}
 	.f_xs_none,
 	.hr_list > .f_xs_none{
-		float:none;
+		/*float:none;*/
+		margin-bottom: 10px;
 	}
 	.d_xs_none,
 	.main_menu > li > a:after,
