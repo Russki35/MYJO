@@ -35,5 +35,11 @@ Route::post('/createprofile/', 'JournalistsController@store');
 
 Route::get('/display', 'JournalistsController@showDisplay');
 
+/*Route::post('')*/
+
 // post qui vient du bouton 'modifier' sur 'mon profil'
 
+/*Route::get('resizeImage', 'ImageController@resizeImage');
+
+Route::post('resizeImagePost',['as'=>'resizeImagePost','uses'=>'ImageController@resizeImagePost']);
+*/

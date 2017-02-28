@@ -1,7 +1,7 @@
 @extends('welcome')
 
 @section('content')
-    <form method="post" action="">
+    <form method="post" action="" enctype="multipart/form-data">
     {{ csrf_field() }}
     <!-- 1ER BLOC presentation -->
              <div class="bg_light_3 section_offset_3">
@@ -11,7 +11,10 @@
 	             		 	<div class="row">
 
 		             		 	<div class=" m_right_10 ">
-											<img class="img-rounded img-responsive" src="images/journalist.jpg" alt="">
+
+		             		 			<label class="profil">Ajouter votre photo</label>
+		             		 			<input type="file" name="picture">
+											<!-- <img class="img-rounded img-responsive" src="images/journalist.jpg" alt=""> -->
 								</div>
 							</div>	
 	             		 </div>

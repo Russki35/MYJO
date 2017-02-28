@@ -11,8 +11,13 @@
 	             		 <div class="col-lg-4 col-md-4 col-sm-4 m_xs_bottom_30">
 	             		 	<div class="row">
 
+	             		 		
+
 		             		 	<div class="m_right_10 ">
-											<img class="img-rounded img-responsive" src="images/journalist.jpg" alt="">
+										
+
+										<img src="{{ asset( $journalist->picture )}}" >	
+											
 								</div>
 							</div>	
 	             		 </div>
@@ -159,11 +164,11 @@
 	                       
 		                       <p ><h5 class="m_bottom_20 ">Langues</h5></p>
 		                       
-		                       <a href="profile/{{ $journalist->id }}">
-		                       <button type="submit" class="btn btn-primary">Envoyer</button>
-		                       </a>
+		                       <!-- ajouter langues en dur-->
 		                       
 	                       	</div>
+
+	                       	
 	                     	 
       					</div> <!-- Fin de row -->
 				</div>
