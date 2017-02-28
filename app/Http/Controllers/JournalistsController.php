@@ -224,47 +224,13 @@ class JournalistsController extends Controller
 
 		$journalist = Journalist::where('user_id', $user_id)->first();
 
-		//-------------------------------------
-		//               USERS
-		//-------------------------------------
-
 		
-		/*if( ! $user instanceof Users )
-		{
-			$user = Users::create([
-
-				'firstname' => request()->profile_title,
-				'lastname' => request()->location,
-				'email' => request()->location,
-				
-			]);
-
-		} 
-		
-		else 
-		{
-			$datas = [
-				'profile_title' => request()->profile_title,
-				'location' => request()->location,
-				'price' => request()->price,
-				'description' => request()->description,
-				'picture' => request()->picture,//mime|jpeg
-				'user_id' => $user_id,
-			];
-
-			$journalist->fill( $datas )->save();
-		}*/
 
 		//return redirect()->route('create_profile');
 		return redirect()->route('profile_profile', compact('path'));
 
 	}
 
-	/*public function getProfileImage()
-	{*/
-
-     
-    /*}*/
 
 	
 

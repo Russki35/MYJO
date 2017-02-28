@@ -2,7 +2,7 @@
 <!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="{{ config('app.locale') }}"><!--<![endif]-->
 <head>
-    <title>MyJo - Welcome</title>
+    <title>MyJo - Réseau professionnel de journalistes indépendants</title>
     <!--meta info-->
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
@@ -41,7 +41,7 @@
     </script>
 
     </head>
-    <body>
+    <body class="sticky_menu">
     <!--layout-->
     <div class="wide_layout bg_light">
         <!--header markup-->
@@ -53,7 +53,7 @@
                     <div class="d_table w_full d_xs_block">
                         <!--logo-->
                         <div class="col-lg-2 col-md-2 col-sm-2 d_table_cell d_xs_block f_none v_align_m logo t_xs_align_c">
-                            <a href="index.html" class="d_inline_m m_xs_top_20 m_xs_bottom_20">
+                            <a href="{{route('home')}}" class="d_inline_m m_xs_top_20 m_xs_bottom_20">
                                 <h3>MyJo</h3>
                             </a>
                         </div>
@@ -102,9 +102,7 @@
                                                                 <li><!-- "/profile" -->
                                                                     <a href="/MYJO/public/profile" class="d_block color_dark relative">Voir mon profil</a>
                                                                 </li>
-                                                                <!-- <li>
-                                                                    <a href="/MYJO/public/edit" class="d_block color_dark relative">Editer mon profil</a>
-                                                                </li> -->
+                                                                
                                                                 <li>
                                                                     <a href="/MYJO/public/createprofile" class="d_block color_dark relative">Editer mon profil</a>
                                                                 </li>
@@ -129,11 +127,7 @@
 
                                             @else
 
-                                                <!-- <li class="container3d relative f_xs_none m_xs_bottom_5">
-
-                                                        <a href="#" style="cursor:pointer" class="color_dark fs_large relative r_xs_corners">Consulter les profils
-                                                        </a>
-                                                </li> -->
+                                                
 
                                                 
 
@@ -157,7 +151,7 @@
 
                                                 <li id="monlien">
 
-                                                        <a  href="display" class="select_button_right color_dark f_xs_none bg_light color_light_hover fs_medium relative tt_uppercase f_left">Parcourir les profils</a>
+                                                        <a  href="display" class="color_dark fs_large relative r_xs_corners">Parcourir les profils</a>
 
                                                 </li>
                                                 <!-- style="cursor:pointer" -->
