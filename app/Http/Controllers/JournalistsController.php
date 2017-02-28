@@ -10,6 +10,8 @@ use App\Experiences;
 use App\Journalist;
 use App\User;
 use Carbon\Carbon;
+use Image;
+use File;
 
 class JournalistsController extends Controller
 {
@@ -68,6 +70,7 @@ class JournalistsController extends Controller
 
 	public function store()
 	{
+		
 		// Définition de la variable user_id
 		// Retrouve l'id de l'utilisateur connecté
 		$user_id = Auth::user()->id;
@@ -162,8 +165,29 @@ class JournalistsController extends Controller
 		//             JOURNALIST
 		//-------------------------------------
 
-		$journalist = Journalist::where('user_id', $user_id)->first();
+		/*$filepath = request()->file('picture')->store('avatars');*/
+		$file = request()->file('picture');
 
+		$path = public_path('avatars/' . $user_id);// . '/avatar.jpg');
+
+		$filepath = $path . '/avatar.jpg';
+
+		if ( ! File::exists($path)) {
+			File::makeDirectory($path);
+		}
+
+		Image::make(
+            $file
+                ->getRealPath()
+
+       )
+            ->resize(300, 300, function ($constraint) {
+                $constraint->aspectRatio();
+            })
+
+           ->save( $path . '/avatar.jpg' );
+
+		$journalist = Journalist::where('user_id', $user_id)->first();
 		
 		if( ! $journalist instanceof Journalist )
 		{
@@ -175,7 +199,7 @@ class JournalistsController extends Controller
 				'location' => request()->location,
 				'price' => request()->price,
 				'description' => request()->description,
-				'picture' => request()->picture,//mime|jpeg
+				'picture' => '/avatars/' . $user_id . '/avatar.jpg',//mime|jpeg
 				'user_id' => $user_id,
 			]);
 
@@ -184,11 +208,14 @@ class JournalistsController extends Controller
 		else 
 		{
 			$datas = [
+
+				'firstname' => request()->firstname,
+				'lastname' => request()->lastname,
 				'profile_title' => request()->profile_title,
 				'location' => request()->location,
 				'price' => request()->price,
 				'description' => request()->description,
-				'picture' => request()->picture,//mime|jpeg
+				'picture' => '/avatars/' . $user_id . '/avatar.jpg',//mime|jpeg
 				'user_id' => $user_id,
 			];
 
@@ -229,11 +256,17 @@ class JournalistsController extends Controller
 		}*/
 
 		//return redirect()->route('create_profile');
-		return redirect()->route('profile_profile');
+		return redirect()->route('profile_profile', compact('path'));
 
 	}
 
-	//Ajouté 18h28
+	/*public function getProfileImage()
+	{*/
+
+     
+    /*}*/
+
+	
 
 
 	public function showDisplay()
